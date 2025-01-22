@@ -1,0 +1,42 @@
+
+# TOUTES LES PAGES #
+
+Onglet :
+• 1 icon
+• 1 nom d'onglet
+
+Header :
+• 1ère ligne : Prénom & Nom
+• 2ème ligne : Menu
+    • À Propos
+    • Éxpériences :
+        • Entreprise 
+        • Entreprise
+        • etc...
+    • Projets : 
+        • Projets Professionnels
+        • Projets Étudiants
+        • etc...
+    • Connaissances : 
+        • Marketing Digital
+            • Notion 1
+            • Notion 2
+            • etc...
+        • IA
+        • Développement Front
+        • Bureautique
+        • OSINT
+
+# PAGE PRINCIPALE (À PROPOS) #
+
+
+
+
+
+# PAGE ÉXPÉRIENCES #
+
+# PAGE PROJETS #
+
+# PAGE CONNAISSANCES #
+
+

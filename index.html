@@ -2,207 +2,14 @@
 <html lang="fr">
 
     <head>
+        <!-- méta données -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guillaume BULLET</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+        <!-- fichiers CSS -->
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
 
-        <style>
-
-            body {
-                font-family: 'Roboto', sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f9;
-                color: #333;
-                line-height: 1.6;
-            }
-        
-            header {
-                background-color: #0077b6; /* Bleu principal */
-                color: white;
-                padding: 10px 20px;
-            }
-        
-            header .title {
-                font-size: 24px;
-                font-weight: 700;
-                margin: 0;
-            }
-        
-            nav {
-                background: #023e8a; /* Bleu foncé */
-                color: white;
-                display: flex;
-                justify-content: center;
-                padding: 10px 0;
-            }
-        
-            nav ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-            }
-        
-            nav ul li {
-                position: relative;
-                margin: 0 15px;
-            }
-        
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-weight: 700;
-            }
-        
-            nav ul li ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: #023e8a; /* Bleu foncé */
-                padding: 10px 0;
-                list-style: none;
-                border-radius: 4px;
-            }
-        
-            nav ul li ul li {
-                margin: 0;
-                padding: 5px 20px;
-            }
-        
-            nav ul li ul li a {
-                color: white;
-                text-decoration: none;
-            }
-        
-            nav ul li:hover ul {
-                display: block;
-            }
-        
-            section {
-                padding: 20px;
-                max-width: 800px;
-                margin: 20px auto;
-                background: white;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                border-radius: 5px;
-            }
-        
-            p {
-                text-align: justify;
-            }
-        
-            h2 {
-                color: #0077b6; /* Bleu principal */
-                margin-top: 0;
-                text-align: center;
-            }
-        
-            h3 {
-                text-align: center;
-            }
-        
-            ul {
-                padding: 0;
-                list-style: none;
-            }
-        
-            ul li {
-                margin-bottom: 10px;
-            }
-        
-            footer {
-                text-align: center;
-                padding: 20px;
-                background: #023e8a; /* Bleu foncé */
-                color: white;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-            }
-        
-            footer a {
-                color: #90e0ef; /* Bleu clair */
-                text-decoration: none;
-            }
-        
-            footer a:hover {
-                text-decoration: underline;
-            }
-        
-            /* Liens paragraphes */
-        
-            .lienParagraphe {
-                text-decoration: none;
-                color: #0077b6; /* Bleu principal */
-                font-weight: bold;
-            }
-        
-            .lienParagraphe:hover {
-                text-decoration: underline;
-            }
-
-            /*--------------------------------------------------------------------------------------------------------------*/
-            /*------------------------------------------------/* ACCORDÉON /*-----------------------------------------------*/
-            /*--------------------------------------------------------------------------------------------------------------*/
-
-            .accordion {
-                    max-width: 600px;
-                    margin: 10px auto;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                    background-color: white;
-                    overflow: hidden;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                }
-
-                .accordion-item {
-                    border-bottom: 1px solid #ddd;
-                }
-
-                .accordion-item:last-child {
-                    border-bottom: none;
-                }
-
-                .accordion-header {
-                    padding: 10px;
-                    background-color: #0077b6; /* Bleu principal */
-                    color: white;
-                    font-weight: bold;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                .accordion-header:hover {
-                    background-color: #005f8a; /* Bleu plus foncé */
-                }
-
-                .accordion-body {
-                    padding: 15px;
-                    display: none;
-                    background-color: #f9f9f9;
-                }
-
-                .accordion-body.open {
-                    display: block;
-                }
-
-                .arrow {
-                    transition: transform 0.3s ease;
-                }
-
-                .arrow.rotate {
-                    transform: rotate(90deg);
-                }
-
-        </style>
 
     </head>
 
@@ -210,7 +17,9 @@
     <body>
         
         <header>
-            <p class="title">Guillaume BULLET</p>
+
+            <p class="siteTitle"> Guillaume BULLET </p>
+
         </header>
 
         <nav>
@@ -235,7 +44,7 @@
         <main>
 
             <section>
-                <h2> 🚀 À propos de moi 🚀 </h2>
+                <h1> 🚀 À propos de moi 🚀 </h1>
                 <p>
                     Diplômé d'un <b>Master en Expert Marketing Digital</b> de l'ISD Flaubert depuis Juin 2024, 
                     après avoir acquis un <b>Bachelor en Chef de Projet Digital</b> à la Normandie Web School 
@@ -251,7 +60,7 @@
             </section>
 
             <section> <!-- FORMATIONS -->
-                <h3>🎓 Formation Académique 🎓 </h3>
+                <h2> 🎓 Formation Académique 🎓 </h2>
                 <section>
                     <div> <!-- M2 -->
                         <p>
@@ -262,11 +71,14 @@
                             RNCP 27057 de niveau 7
                             <br>
                             <b> 2022 - 2024 </b>
+                            <br>
+                            Rouen ( 76 )
+                            <br>
                         </p>
                         <div class="accordion">
                             <div class="accordion-item">
                                 <div class="accordion-header">
-                                    <p> 📋 Compétences acquises : </p>
+                                    <p> 📚 Compétences acquises : </p>
                                     <span class="arrow">&#9654;</span>
                                 </div>
                                 <div class="accordion-body">
@@ -302,6 +114,7 @@
                     </div>
                     <br>
                     <hr>
+                    <br>
                     <div> <!-- BACHELOR -->
                         <p> 
                             <a class="lienParagraphe" href="https://www.francecompetences.fr/recherche/rncp/36011/"> Bac+3 Chef de Projet Digital </a>
@@ -312,11 +125,13 @@
                             <br>
                             <b> 2019 - 2022 </b>
                             <br>
+                            Rouen ( 76 )
+                            <br>
                         </p>
                         <div class="accordion">
                             <div class="accordion-item">
                                 <div class="accordion-header">
-                                    <p> 📋 Compétences acquises : </p>
+                                    <p> 📚 Compétences acquises : </p>
                                     <span class="arrow">&#9654;</span>
                                 </div>
                                 <div class="accordion-body">
@@ -346,7 +161,9 @@
                             </div>
                         </div>
                     </div>
+                    <br>
                     <hr>
+                    <br>
                     <div> <!-- BTS -->
                         <p> 
                             <a class="lienParagraphe" href="https://www.francecompetences.fr/recherche/rncp/10023/"> BTS Assistant de Manager </a> 
@@ -357,11 +174,13 @@
                             <br>
                             <b> 2016 - 2018 </b>
                             <br>
+                            Rouen ( 76 )
+                            <br>
                         </p>
                         <div class="accordion">
                             <div class="accordion-item">
                                 <div class="accordion-header">
-                                    <p> 📋 Compétences acquises : </p>
+                                    <p> 📚 Compétences acquises : </p>
                                     <span class="arrow">&#9654;</span>
                                 </div>
                                 <div class="accordion-body">
@@ -395,194 +214,229 @@
             </section>
 
             <section> <!-- EXPÉRIENCES PROFESSIONNELLES -->
-                <h3> 💼 Expériences Professionnelles 💼 </h3>
-                <div>
-                    <p> 
-                        <b> Flornitur ( ELONIX ) </b>
-                        <br>
-                        <b> Assistant Web Marketing - Contrat d'Alternance </b>
-                        <br>
-                        <b> 2022 - 2023 </b>
-                        <br>
-                        Rouen ( 76 )
-                    </p>
-                    <p> <b> Missions : </b> </p>
-                    <p>
-                        • Gestion et maintenance du site e-commerce ( CMS )
-                        <br>
-                        • Intégration de contenus et produits
-                        <br>
-                        • Relations avec les divers prestataires web
-                        <br>
-                        • Newsletters
-                        <br>
-                        • Relation client
-                        <br>
-                        • Stratégie de communication
-                        <br>
-                        • Analyse de données ( KPIs et ROI )
-                        <br>
-                        • Soutien à l'action managériale
-                        <br>
-                        • Soutien à l'action évènementielle
-                        <br>
-                        • Utilisation de l'ERP ( Sage 100 )
-                        <br>
-                        • Bureautique 
-                        <br>
-                    </p>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div>
-                    <p> 
-                        <b> AKUTIGA </b>
-                        <br>
-                        <b> Assistant Chef de Projet - Contrat d'Alternance </b>
-                        <br>
-                        <b> 2021 - 2022 </b>
-                        <br>
-                        Verneuil-sur-Avre ( 27 )
-                    </p>
-                    <p> <b> Missions : </b> </p>
-                    <p>
-                        • Gestion et maintenance du site e-commerce ( CMS personnalisé )
-                        <br>
-                        • Intégration de contenus et produits
-                        <br>
-                        • Référencement naturel - SEO
-                        <br>
-                        • Relations avec les divers prestataires web
-                        <br>
-                        • Newsletters
-                        <br>
-                        • Stratégie de communication
-                        <br>
-                        • Analyse de données ( KPIs et ROI )
-                        <br>
-                        • Soutien à l'action managériale
-                        <br>
-                        • Soutien à l'action évènementielle
-                        <br>
-                        • Déploiement des réseaux sociaux - SMO & SMA
-                        <br>
-                        • Bureautique 
-                        <br>
-                    </p>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div>
-                    <p> 
-                        <b> Alternative Container </b>
-                        <br>
-                        <b> Web Master - Freelance </b>
-                        <br>
-                        <b> 2020 - 2021 </b>
-                        <br>
-                        Bourges ( 18 )
-                    </p>
-                    <p> <b> Missions : </b> </p>
-                    <p>
-                        • Gestion et maintenance du site ( CMS )
-                        <br>
-                        • Intégration de contenus et produits
-                        <br>
-                        • Référencement naturel - SEO
-                        <br>
-                        • Analyse de données ( KPIs - Trafic - Sessions - etc...)
-                        <br>
-                    </p>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div>
-                    <p> 
-                        <b> Lubrizol France </b>
-                        <br>
-                        <b> Assitant de Direction Usine - Stage Rémunéré </b>
-                        <br>
-                        <b> 2017 </b>
-                        <br>
-                        Rouen ( 76 )
-                    </p>
-                    <p> <b> Missions : </b> </p>
-                    <p>
-                        • Soutien à l'action managériale
-                        <br>
-                        • Intégration de contenus sur l'intranet
-                        <br>
-                        • Organisation de réunions et comités
-                        <br>
-                        • Bureautique
-                        <br>
-                        • Communication interne
-                    </p>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div>
-                    <p> 
-                        <b> Island Properties </b>
-                        <br>
-                        <b> Assitant de Direction - Stage International Rémunéré </b>
-                        <br>
-                        <b> 2017 </b>
-                        <br>
-                        Sliema, MALTE
-                    </p>
-                    <p> <b> Missions : </b> </p>
-                    <p>
-                        • Soutien à l'action managériale
-                        <br>
-                        • Relation Client
-                        <br>
-                        • Gestion de groupes projets
-                        <br>
-                        • Gestion de projet : premières étapes de la refonte du site internet
-                        <br>
-                        • Analyse Concurrentielle
-                    </p>
-                </div>
-                <br>
+                <h2> 💼 Expériences Professionnelles 💼 </h2>
+                <section>
+                    <div> <!-- ELONIX -->
+                        <p> 
+                            <b> Flornitur ( ELONIX ) </b>
+                            <br>
+                            <b> Assistant Web Marketing - Contrat d'Alternance </b>
+                            <br>
+                            <b> 2022 - 2023 </b>
+                            <br>
+                            Rouen ( 76 )
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p> 📋 Missions : </p>
+                                    <span class="arrow">&#9654;</span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>
+                                        • Gestion et maintenance du site e-commerce ( CMS )
+                                        <br>
+                                        • Intégration de contenus et produits
+                                        <br>
+                                        • Relations avec les divers prestataires web
+                                        <br>
+                                        • Newsletters
+                                        <br>
+                                        • Relation client
+                                        <br>
+                                        • Stratégie de communication
+                                        <br>
+                                        • Analyse de données ( KPIs et ROI )
+                                        <br>
+                                        • Soutien à l'action managériale
+                                        <br>
+                                        • Soutien à l'action évènementielle
+                                        <br>
+                                        • Utilisation de l'ERP ( Sage 100 )
+                                        <br>
+                                        • Bureautique 
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div> <!-- AKUTIGA -->
+                        <p> 
+                            <b> AKUTIGA </b>
+                            <br>
+                            <b> Assistant Chef de Projet - Contrat d'Alternance </b>
+                            <br>
+                            <b> 2021 - 2022 </b>
+                            <br>
+                            Verneuil-sur-Avre ( 27 )
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p> 📋 Missions : </p>
+                                    <span class="arrow">&#9654;</span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>
+                                        • Gestion et maintenance du site e-commerce ( CMS personnalisé )
+                                        <br>
+                                        • Intégration de contenus et produits
+                                        <br>
+                                        • Référencement naturel - SEO
+                                        <br>
+                                        • Relations avec les divers prestataires web
+                                        <br>
+                                        • Newsletters
+                                        <br>
+                                        • Stratégie de communication
+                                        <br>
+                                        • Analyse de données ( KPIs et ROI )
+                                        <br>
+                                        • Soutien à l'action managériale
+                                        <br>
+                                        • Soutien à l'action évènementielle
+                                        <br>
+                                        • Déploiement des réseaux sociaux - SMO & SMA
+                                        <br>
+                                        • Bureautique 
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div> <!-- Alternative Container -->
+                        <p> 
+                            <b> Alternative Container </b>
+                            <br>
+                            <b> Web Master - Freelance </b>
+                            <br>
+                            <b> 2020 - 2021 </b>
+                            <br>
+                            Bourges ( 18 )
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p> 📋 Missions : </p>
+                                    <span class="arrow">&#9654;</span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>
+                                        • Gestion et maintenance du site ( CMS )
+                                        <br>
+                                        • Intégration de contenus et produits
+                                        <br>
+                                        • Référencement naturel - SEO
+                                        <br>
+                                        • Analyse de données ( KPIs - Trafic - Sessions - etc...)
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div> <!-- Lubrizol France -->
+                        <p> 
+                            <b> Lubrizol France </b>
+                            <br>
+                            <b> Assitant de Direction Usine - Stage Rémunéré </b>
+                            <br>
+                            <b> 2017 </b>
+                            <br>
+                            Rouen ( 76 )
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p> 📋 Missions : </p>
+                                    <span class="arrow">&#9654;</span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>
+                                        • Soutien à l'action managériale
+                                        <br>
+                                        • Intégration de contenus sur l'intranet
+                                        <br>
+                                        • Organisation de réunions et comités
+                                        <br>
+                                        • Bureautique
+                                        <br>
+                                        • Communication interne
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div> <!-- Island Properties -->
+                        <p> 
+                            <b> Island Properties </b>
+                            <br>
+                            <b> Assitant de Direction - Stage International Rémunéré </b>
+                            <br>
+                            <b> 2017 </b>
+                            <br>
+                            Sliema, MALTE
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p> 📋 Missions : </p>
+                                    <span class="arrow">&#9654;</span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>
+                                        • Soutien à l'action managériale
+                                        <br>
+                                        • Relation Client
+                                        <br>
+                                        • Gestion de groupes projets
+                                        <br>
+                                        • Gestion de projet : premières étapes de la refonte du site internet
+                                        <br>
+                                        • Analyse Concurrentielle
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </section>
 
         </main>
 
-
-        <script>
-            document.querySelectorAll('.accordion-header').forEach(header => {
-                header.addEventListener('click', () => {
-                    const body = header.nextElementSibling;
-                    const arrow = header.querySelector('.arrow');
-
-                    // Toggle visibility of the body
-                    body.classList.toggle('open');
-
-                    // Toggle arrow rotation
-                    arrow.classList.toggle('rotate');
-                });
-            });
-        </script>
-
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email : <a href="mailto:monemail@example.com">monemail@example.com</a></p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/monprofil" target="_blank">monprofil</a></p>
+            <p> <b> LinkedIn </b> : <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> Guillaume BULLET </a></p>
+            <!-- <p> GitHub : <a class="lienParagraphe" href="https://github.com/GuiB2776" target="_blank"> Guillaume BULLET </a></p> -->
         </section>
 
         <footer>
 
             <div class="socket">
-                <p> &copy; 2025 © Guillaume BULLET | Tous droits réservés. </p>
+                <p> &copy; 2025 <!-- © --> Guillaume BULLET | Tous droits réservés. </p>
             </div>
 
         </footer>
 
     </body>
+
+    <!-- fichiers JavaScript -->
+    <script src="script.js"> </script>
 
 </html>

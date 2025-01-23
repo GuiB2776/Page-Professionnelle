@@ -1,0 +1,196 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0077b6; /* Bleu principal */
+    color: white;
+    padding: 10px 20px;
+}
+
+.siteTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    background: #023e8a; /* Bleu foncé */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #023e8a; /* Bleu foncé */
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+}
+
+nav ul li ul li {
+    margin: 0;
+    padding: 5px 20px;
+}
+
+nav ul li ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    color: #0077b6; /* Bleu principal */
+    margin-top: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #0077b6; /* Bleu principal */
+    margin-top: 0;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #023e8a; /* Bleu foncé */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #90e0ef; /* Bleu clair */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Liens paragraphes */
+
+.lienParagraphe {
+    text-decoration: none;
+    color: #0077b6; /* Bleu principal */
+    font-weight: bold;
+}
+
+.lienParagraphe:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------/* ACCORDÉON /*-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.accordion {
+    max-width: 600px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    padding: 10px;
+    background-color: #0077b6; /* Bleu principal */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: #005f8a; /* Bleu plus foncé */
+}
+
+.accordion-body {
+    padding: 15px;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.accordion-body.open {
+    display: block;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(90deg);
+}

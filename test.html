@@ -3,115 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accordéon Exemple</title>
+    <title> Accordéon Exemple </title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            margin: 0;
-            padding: 20px;
         }
-
-        .accordion {
-            max-width: 600px;
-            margin: 20px auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: white;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .accordion-item:last-child {
-            border-bottom: none;
-        }
-
-        .accordion-header {
-            padding: 15px;
-            background-color: #6c63ff;
+    
+        header {
+            background-color: #023e8a; /* Bleu foncé */
             color: white;
-            font-weight: bold;
-            cursor: pointer;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .accordion-header:hover {
-            background-color: #5a53d4;
+    
+        .header-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .accordion-body {
-            padding: 15px;
-            display: none;
-            background-color: #f9f9f9;
+    
+        .siteTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
         }
-
-        .accordion-body.open {
+    
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+    
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 10px;
+        }
+    
+        nav ul li:hover > ul {
             display: block;
         }
-
-        .arrow {
-            transition: transform 0.3s ease;
+    
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #0077b6;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 4px;
+            z-index: 1000;
         }
-
-        .arrow.rotate {
-            transform: rotate(90deg);
+    
+        nav ul li ul li {
+            margin: 0;
+            padding: 5px 20px;
+        }
+    
+        nav ul li ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    
+        nav ul li ul li a:hover {
+            color: #90e0ef;
+        }
+    
+        /* Responsive Navigation */
+        @media screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+    
+            nav ul li {
+                margin: 10px 0;
+            }
+    
+            nav ul li ul {
+                position: static;
+            }
         }
     </style>
+    
 </head>
 <body>
-    <h1>Exemple d'Accordéon</h1>
-    <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                Bac+5 
-                <br>
-                ISD Flaubert
-                <span class="arrow">&#9654;</span>
-            </div>
-            <div class="accordion-body">
-                <p>Contenu de la section 1. Ajoutez ici des informations spécifiques.</p>
-            </div>
+    <header>
+        <div class="header-container">
+            <p class="siteTitle">Guillaume BULLET</p>
+            <nav id="mainNav"></nav>
         </div>
-        <div class="accordion-item">
-            <div class="accordion-header">
-                Section 2
-                <span class="arrow">&#9654;</span>
-            </div>
-            <div class="accordion-body">
-                <p>Contenu de la section 2. Ajoutez ici des informations spécifiques.</p>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">
-                Section 3
-                <span class="arrow">&#9654;</span>
-            </div>
-            <div class="accordion-body">
-                <p>Contenu de la section 3. Ajoutez ici des informations spécifiques.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const body = header.nextElementSibling;
-                const arrow = header.querySelector('.arrow');
-
-                // Toggle visibility of the body
-                body.classList.toggle('open');
-
-                // Toggle arrow rotation
-                arrow.classList.toggle('rotate');
-            });
-        });
-    </script>
+    </header>
+    
 </body>
+
+<script>
+    // Définir les liens dans une structure JSON
+    const menuLinks = [
+        { text: "À propos", url: "#about" },
+        {
+            text: "Expériences",
+            url: "#experiences",
+            children: [
+                { text: "Poste 1", url: "#job1" },
+                { text: "Poste 2", url: "#job2" },
+            ],
+        },
+        {
+            text: "Compétences",
+            url: "#skills",
+            children: [
+                { text: "Compétence 1", url: "#skill1" },
+                { text: "Compétence 2", url: "#skill2" },
+            ],
+        },
+        { text: "Contact", url: "#contact" },
+    ];
+
+    // Générer dynamiquement le menu
+    const generateMenu = (menuLinks) => {
+        const navContainer = document.getElementById("mainNav");
+
+        if (navContainer) {
+            const ul = document.createElement("ul");
+
+            menuLinks.forEach((menuItem) => {
+                const li = document.createElement("li");
+
+                const a = document.createElement("a");
+                a.href = menuItem.url;
+                a.textContent = menuItem.text;
+                li.appendChild(a);
+
+                // Vérifier si le menuItem a des enfants
+                if (menuItem.children) {
+                    const subUl = document.createElement("ul");
+
+                    menuItem.children.forEach((subItem) => {
+                        const subLi = document.createElement("li");
+                        const subA = document.createElement("a");
+                        subA.href = subItem.url;
+                        subA.textContent = subItem.text;
+                        subLi.appendChild(subA);
+                        subUl.appendChild(subLi);
+                    });
+
+                    li.appendChild(subUl);
+                }
+
+                ul.appendChild(li);
+            });
+
+            navContainer.appendChild(ul);
+        }
+    };
+
+    // Appeler la fonction pour générer le menu
+    generateMenu(menuLinks);
+</script>
 </html>

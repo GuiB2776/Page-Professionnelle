@@ -40,3 +40,49 @@ Header :
 # PAGE CONNAISSANCES #
 
 
+
+
+Refais moi le menu de navigation principal : 
+    - le titre et le menu de navigation principal doivent entrer dans le <header> sur 2 lignes
+    - ajoute un nouvel index pour le <header> afin qu'il reste visible lorsque l'utilisateur scroll sur la page 
+    - ajoute en javascript la gestion de chaque lien afin qu'ils soient gérés depuis le fichier JavaScript ce qui permettra de mettre à jour les liens depuis le fichier sur toutes les pages HTML en même temps sans avoir besoin de refaire chaque lien à la main
+    - refais l'ordre du menu principal en suivant cet index du menu : 
+        - À propos :
+            - Formations :
+                - Formation3
+                - Formation2
+                - Formation1
+            - Expériences :
+                - Job5
+                - Job4
+                - Job3
+                - Job2
+                - Job1
+        - Web Marketing :
+            - PageMarketing1 :
+                - SousPageMarketing1-1
+                - SousPageMarketing1-2
+                - SousPageMarketing1-3
+            - PageMarketing2 :
+                - SousPageMarketing2-1
+                - SousPageMarketing2-2
+                - SousPageMarketing2-2
+            - PageMarketing3 :
+                - SousPageMarketing3-1
+                - SousPageMarketing3-2
+                - SousPageMarketing3-3
+        - ExemplesSuivants :
+            - ExempleSuivant1 :
+                - SousExempleSuivant1-1
+                - SousExempleSuivant1-2
+                - SousExempleSuivant1-3
+            - ExempleSuivant2 :
+                - SousExempleSuivant2-1
+                - SousExempleSuivant2-2
+                - SousExempleSuivant2-3
+            - ExempleSuivant3 :
+                - SousExempleSuivant3-1
+                - SousExempleSuivant3-2
+                - SousExempleSuivant3-3
+                
+

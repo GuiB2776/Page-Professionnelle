@@ -8,34 +8,330 @@
         <title>Guillaume BULLET</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <!-- fichiers CSS -->
-        <link rel="stylesheet" href="test.css">
-        <link rel="stylesheet" href="headerNav.css">
-        <link rel="stylesheet" href="contact.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- CSS -->
+        <style>
 
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
+                line-height: 1.6;
+            }
 
+            /*--------------------------------------------------------------------------------------------------------------*/
+            /*---------------------------------------/* HEADER & MENU NAV PRINCIPAL /*--------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            #menuPrincipal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            header {
+                background-color: #0077b6; /* Bleu principal */
+                color: white;
+                padding: 10px 20px;
+            }
+
+            .siteTitle {
+                font-size: 24px;
+                font-weight: 700;
+                margin: 0;
+                text-align: center;
+            }
+
+            nav {
+                background: #023e8a; /* Bleu foncé */
+                color: white;
+                display: flex;
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                position: relative;
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            nav ul li ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #023e8a; /* Bleu foncé */
+                padding: 10px 0;
+                list-style: none;
+                border-radius: 4px;
+            }
+
+            nav ul li ul li {
+                margin: 0;
+                padding: 5px 20px;
+            }
+
+            nav ul li ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            nav ul li:hover ul {
+                display: block;
+            }
+
+            /*--------------------------------------------------------------------------------------------------------------*/
+            /*-------------------------------------------------/* SECTIONS /*-----------------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            section {
+                padding: 20px;
+                max-width: 800px;
+                margin: 20px auto;
+                background: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            h1 {
+                color: #0077b6; /* Bleu principal */
+                margin-top: 0;
+                text-align: center;
+            }
+
+            h2 {
+                color: #0077b6; /* Bleu principal */
+                margin-top: 0;
+                text-align: center;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+            /* Liens paragraphes */
+
+            .lienParagraphe {
+                text-decoration: none;
+                color: #0077b6; /* Bleu principal */
+                font-weight: bold;
+            }
+
+            .lienParagraphe:hover {
+                text-decoration: underline;
+            }
+
+            /*--------------------------------------------------------------------------------------------------------------*/
+            /*---------------------------------------------------/* FOOTER /*-----------------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: #023e8a; /* Bleu foncé */
+                color: white;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+
+            footer a {
+                color: #90e0ef; /* Bleu clair */
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            /*--------------------------------------------------------------------------------------------------------------*/
+            /*------------------------------------------------/* ACCORDÉON /*-----------------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            .accordion {
+                max-width: 600px;
+                margin: 10px auto;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: white;
+                overflow: hidden;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid #ddd;
+            }
+
+            .accordion-item:last-child {
+                border-bottom: none;
+            }
+
+            .accordion-header {
+                padding: 10px;
+                background-color: #0077b6; /* Bleu principal */
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .accordion-header:hover {
+                background-color: #005f8a; /* Bleu plus foncé */
+            }
+
+            .accordion-body {
+                padding: 15px;
+                display: none;
+                background-color: #f9f9f9;
+            }
+
+            .accordion-body.open {
+                display: block;
+            }
+
+            .arrow {
+                transition: transform 0.3s ease;
+            }
+
+            .arrow.rotate {
+                transform: rotate(90deg);
+            }
+
+            /*--------------------------------------------------------------------------------------------------------------*/
+            /*--------------------------------------------/* SCROLL TOP BUTTON /*-------------------------------------------*/
+            /*--------------------------------------------------------------------------------------------------------------*/
+
+            /* Bouton "Retour en haut" */
+            #scrollToTop {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: #0077b6; /* Bleu principal */
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                font-size: 24px;
+                visibility: hidden; /* Caché par défaut */
+                opacity: 0;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                z-index: 1000;
+            }
+
+            /* Affichage du bouton lorsque visible */
+            #scrollToTop.show {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            /* Survol du bouton */
+            #scrollToTop:hover {
+                background-color: #005f8a; /* Bleu foncé au survol */
+            }
+
+            /* Cache le bouton sur les écrans de petite taille */ 
+            /*
+            @media screen and (max-width: 768px) {
+                #scrollToTop {
+                    display: none;
+                }
+            } */
+        </style>
 
     </head>
 
 
     <body>
 
-        <header>
-            <div class="header-container">
-                <!-- Titre principal -->
-                <h1 class="site-title">Guillaume BULLET</h1>
-                <!-- Menu principal -->
-                <nav>
-                    <ul id="mainMenu"></ul>
-                </nav>
-            </div>
-        </header>
+        <div id="menuPrincipal"> <!-- MENU PRINCIPAL -->
+            <header>
+                <p class="siteTitle"> Guillaume BULLET </p>
+            </header>
+            <nav>
+                <ul>
+                    <ul>
+                        <li><a href="#about">À propos</a>
+                            <ul>
+                                <li><a href="#formations">Formations</a>
+                                    <ul>
+                                        <li><a href="#formation3">M2</a></li>
+                                        <li><a href="#formation2">Bachelor</a></li>
+                                        <li><a href="#formation1">BTS</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#experiences">Expériences</a>
+                                    <ul>
+                                        <li><a href="#job5">ELONIX</a></li>
+                                        <li><a href="#job4">AKUTIGA</a></li>
+                                        <li><a href="#job3">Alternative Container</a></li>
+                                        <li><a href="#job2">Lubrizol France</a></li>
+                                        <li><a href="#job1">Island properties</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#experiences">Expériences</a>
+                        <ul>
+                            <li><a href="#job1">Poste 1</a></li>
+                            <li><a href="#job2">Poste 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#skills">Compétences</a>
+                        <ul>
+                            <li><a href="#skill1">Poste 1</a></li>
+                            <li><a href="#skill2">Poste 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <br><br>
+        <br><br><br><br><br>
 
         <main>
 
-            <section>
+            <section> <!-- À PROPOS -->
                 <h1> 🚀 À propos de moi 🚀 </h1>
                 <p>
                     Diplômé d'un <b>Master en Expert Marketing Digital</b> de l'ISD Flaubert depuis Juin 2024, 
@@ -342,7 +638,7 @@
                         <p> 
                             <b> Lubrizol France </b>
                             <br>
-                            <b> Assitant de Direction Usine - Stage Rémunéré </b>
+                            <b> Assistant de Direction Usine - Stage Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -378,7 +674,7 @@
                         <p> 
                             <b> Island Properties </b>
                             <br>
-                            <b> Assitant de Direction - Stage International Rémunéré </b>
+                            <b> Assistant de Direction - Stage International Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -412,53 +708,73 @@
 
         </main>
 
-        <section id="contact">
+        <section id="contact"> <!-- CONTACT -->
             <h2>Contact</h2>
-            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
-        
-            <!-- Formulaire de contact -->
-            <form id="contactForm">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-        
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-        
-                <label for="subject">Sujet :</label>
-                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
-        
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-        
-                <button type="submit">Envoyer</button>
-            </form>
+            <p> <b> LinkedIn </b> : <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> Guillaume BULLET </a></p>
+            <!-- <p> GitHub : <a class="lienParagraphe" href="https://github.com/GuiB2776" target="_blank"> Guillaume BULLET </a></p> -->
         </section>
 
         <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
             &#8679; <!-- Flèche vers le haut -->
         </div>
 
-        <footer>
+        <footer> <!-- FOOTER -->
 
-            <div class="socket" class="borderSocket">
-                <div class="socket-left">
-                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
-                </div>
-                <div class="socket-center">
-                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
-                </div>
-                <div class="socket-right">
-                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
-                </div>
+            <div class="socket">
+                <p> &copy; 2025 <!-- © --> Guillaume BULLET | Tous droits réservés. </p>
             </div>
-          </footer>
+
+        </footer>
 
     </body>
 
     <!-- fichiers JavaScript -->
-    <script src="test.js"> </script>
-    <script src="headerNav.js"> </script>
-    <script src="contact.js"></script>
-    <script src="footer.js"> </script>
+    <script src="script.js"> </script>
+    <!-- JavaScript -->
+    <script>
+
+        ///------------------------------------------------------------------------------///
+        ///------------------------------/// ACCORDÉON ///------------------------------///
+        ///----------------------------------------------------------------------------///
+
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const body = header.nextElementSibling;
+                const arrow = header.querySelector('.arrow');
+
+                // Toggle visibility of the body
+                body.classList.toggle('open');
+
+                // Toggle arrow rotation
+                arrow.classList.toggle('rotate');
+            });
+        });
+
+
+        ///------------------------------------------------------------------------------///
+        ///--------------------------/// SCROLL TOP BUTTON ///--------------------------///
+        ///----------------------------------------------------------------------------///
+
+        // Sélectionne le bouton "Retour en haut"
+        const scrollToTopButton = document.getElementById("scrollToTop");
+
+        // Affiche/masque le bouton en fonction de la position de défilement
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { // Affiche si l'utilisateur descend de 300px
+                scrollToTopButton.classList.add("show");
+            } else {
+                scrollToTopButton.classList.remove("show");
+            }
+        });
+
+        // Ajoute un événement au clic pour remonter en haut de la page
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Défilement fluide
+            });
+        });
+
+    </script>
 
 </html>

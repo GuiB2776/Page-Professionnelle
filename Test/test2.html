@@ -2,72 +2,464 @@
 <html lang="fr">
 
     <head>
-        <!-- méta données -->
+        <!-- MÉTADONNÉES -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guillaume BULLET</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <!-- fichiers CSS -->
-        <link rel="stylesheet" href="style.css">
-
-
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="test.css">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="footer.css">
     </head>
 
 
     <body>
 
-        <div id="menuPrincipal">
-            <header>
-                <p class="siteTitle"> Guillaume BULLET </p>
-            </header>
-            <nav>
-                <ul>
+        <header>
+            <!-- HEADER & MENU PRINCIPAL -->
+            <div class="header-container">
+                <!-- Titre principal -->
+                <h1 class="site-title">Guillaume BULLET</h1>
+                <!-- Menu principal -->
+                <nav>
+                    <div class="burger-menu" onclick="toggleBurgerMenu()">
+                        <div class="burger-bar"></div>
+                        <div class="burger-bar"></div>
+                        <div class="burger-bar"></div>
+                    </div>
+                    <ul id="mainMenu"></ul>
+                </nav>
+            </div>
+        </header>
+        
+        
+        
+        <style>
+/*--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------/* HEADER & MENU NAV PRINCIPAL /*--------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header fixe */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #023e8a;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+/* Conteneur du header */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titre principal */
+.site-title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Menu principal (ul) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Menu items (li) */
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+    white-space: nowrap; /* Empêche la rupture des mots */
+}
+
+/* Liens du menu */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    display: block;
+}
+
+/* Sous-menus (ul à l'intérieur des li) */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #005f8a;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Lien au survol d'un sous-menu */
+nav ul li ul li a:hover {
+    color: #90e0ef;
+}
+
+/* Affiche le sous-menu au survol du menu */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Styles pour le burger menu */
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Animations pour transformer le burger en croix */
+.burger-menu.active .burger-bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+}
+
+.burger-menu.active .burger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+}
+
+/* Affiche le menu burger en version mobile */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    /* Affichage du sous-menu en mode burger */
+    nav ul li ul {
+        position: static;
+        display: none;
+    }
+
+    nav ul li:hover > ul {
+        display: block;
+    }
+}
+
+        </style>
+
+        <script>
+//--------------------------/// LIENS AUTOMATIQUES ///--------------------------///
+const menuItems = {
+    "À propos": {
+        "Formations": {
+            "Formation1": "#formation1",
+            "Formation2": "#formation2",
+            "Formation3": "#formation3",
+            "Formation3": "#formation3",
+            "Formation3": "#formation3",
+        },
+        "Expériences": {
+            "Job1": "#job1",
+            "Job2": "#job2",
+            "Job3": "#job3",
+            "Job4": "#job4",
+            "Job5": "#job5",
+        },
+    },
+    "Web Marketing": {
+        "PageMarketing1": {
+            "SousPageMarketing1-1": "#marketing1-1",
+            "SousPageMarketing1-2": "#marketing1-2",
+            "SousPageMarketing1-3": "#marketing1-3",
+        },
+        "PageMarketing2": {
+            "SousPageMarketing2-1": "#marketing2-1",
+            "SousPageMarketing2-2": "#marketing2-2",
+            "SousPageMarketing2-3": "#marketing2-3",
+        },
+        "PageMarketing3": {
+            "SousPageMarketing3-1": "#marketing3-1",
+            "SousPageMarketing3-2": "#marketing3-2",
+            "SousPageMarketing3-3": "#marketing3-3",
+        },
+    },
+    "ExemplesSuivants": {
+        "ExempleSuivant1": {
+            "SousExempleSuivant1-1": "#suivant1-1",
+            "SousExempleSuivant1-2": "#suivant1-2",
+            "SousExempleSuivant1-3": "#suivant1-3",
+        },
+        "ExempleSuivant2": {
+            "SousExempleSuivant2-1": "#suivant2-1",
+            "SousExempleSuivant2-2": "#suivant2-2",
+            "SousExempleSuivant2-3": "#suivant2-3",
+        },
+        "ExempleSuivant3": {
+            "SousExempleSuivant3-1": "#suivant3-1",
+            "SousExempleSuivant3-2": "#suivant3-2",
+            "SousExempleSuivant3-3": "#suivant3-3",
+        },
+    },
+};
+
+// Fonction pour générer le menu HTML
+function generateMenu(menuData, parentElement) {
+    for (const [label, value] of Object.entries(menuData)) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        if (typeof value === "string") {
+            a.href = value;
+        } else {
+            a.href = "#"; // Liens parents sans action
+        }
+
+        a.textContent = label;
+        li.appendChild(a);
+
+        if (typeof value === "object") {
+            const subMenu = document.createElement("ul");
+            generateMenu(value, subMenu);
+            li.appendChild(subMenu);
+        }
+
+        parentElement.appendChild(li);
+    }
+}
+
+// Injecte le menu dans la page
+const mainMenu = document.getElementById("mainMenu");
+generateMenu(menuItems, mainMenu);
+
+// Toggle pour le menu burger
+function toggleBurgerMenu() {
+    const menu = document.querySelector("nav ul");
+    const burger = document.querySelector(".burger-menu");
+    menu.classList.toggle("show");
+    burger.classList.toggle("active");
+}
+        </script>
+
+<br><br>
+
+<div id="mainNavMenu">
+    <ul class="main-navigation">
+        <li><a href="#"> Front End Design </a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a>
                     <ul>
-                        <li><a href="#about">À propos</a>
-                            <ul>
-                                <li><a href="#formations">Formations</a>
-                                    <ul>
-                                        <li><a href="#formation3">M2</a></li>
-                                        <li><a href="#formation2">Bachelor</a></li>
-                                        <li><a href="#formation1">BTS</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#experiences">Expériences</a>
-                                    <ul>
-                                        <li><a href="#job5">ELONIX</a></li>
-                                        <li><a href="#job4">AKUTIGA</a></li>
-                                        <li><a href="#job3">Alternative Container</a></li>
-                                        <li><a href="#job2">Lubrizol France</a></li>
-                                        <li><a href="#job1">Island properties</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Resets</a></li>
+                        <li><a href="#">Grids</a></li>
+                        <li><a href="#">Frameworks</a></li>
                     </ul>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#experiences">Expériences</a>
-                        <ul>
-                            <li><a href="#job1">Poste 1</a></li>
-                            <li><a href="#job2">Poste 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#skills">Compétences</a>
-                        <ul>
-                            <li><a href="#skill1">Poste 1</a></li>
-                            <li><a href="#skill2">Poste 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+                </li>
+                <li><a href="#">JavaScript</a>
+                    <ul>
+                        <li><a href="#">Ajax</a></li>
+                        <li><a href="#">jQuery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#"> Front End Design </a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a>
+                    <ul>
+                        <li><a href="#">Resets</a></li>
+                        <li><a href="#">Grids</a></li>
+                        <li><a href="#">Frameworks</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">JavaScript</a>
+                    <ul>
+                        <li><a href="#">Ajax</a></li>
+                        <li><a href="#">jQuery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#"> Front End Design </a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a>
+                    <ul>
+                        <li><a href="#">Resets</a></li>
+                        <li><a href="#">Grids</a></li>
+                        <li><a href="#">Frameworks</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">JavaScript</a>
+                    <ul>
+                        <li><a href="#">Ajax</a></li>
+                        <li><a href="#">jQuery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
-        <br><br><br><br><br>
 
-        <main>
+<style>
+    /* Conteneur principal du menu */
+    #mainNavMenu {
+        background-color: #0077b6; /* Couleur principale */
+        padding: 10px;
+        justify-items: center;
+    }
 
-            <section>
+    /* Style de base des listes */
+    .main-navigation {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* Style des liens principaux */
+    .main-navigation > li {
+        position: relative;
+        margin-right: 20px; /* Espacement horizontal */
+    }
+
+    .main-navigation > li > a {
+        display: block;
+        padding: 10px 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #0077b6;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover sur les liens principaux */
+    .main-navigation > li > a:hover {
+        background-color: #005f8a;
+    }
+
+    /* Sous-menus */
+    .main-navigation li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0077b6; /* Couleur des sous-menus */
+        padding: 10px 0;
+        list-style: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+        border-radius: 5px;
+        z-index: 10; /* Toujours au-dessus */
+    }
+
+    /* Sous-menus des sous-menus */
+    .main-navigation li ul li ul {
+        left: 100%;
+        top: 0;
+        border-radius: 5px;
+    }
+
+    /* Liens des sous-menus */
+    .main-navigation li ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px; /* Légèrement plus petit que le menu principal */
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        white-space: nowrap; /* Évite que le texte déborde */
+    }
+
+    /* Hover sur les liens des sous-menus */
+    .main-navigation li ul li a:hover {
+        background-color: #005f8a; /* Couleur au survol */
+    }
+
+    /* Afficher les sous-menus au survol */
+    .main-navigation li:hover > ul {
+        display: block;
+    }
+
+    /* Afficher les sous-menus des sous-menus */
+    .main-navigation li ul li:hover > ul {
+        display: block;
+    }
+
+    /* Transition pour un effet de fluidité */
+    .main-navigation li ul,
+    .main-navigation li ul li ul {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    .main-navigation li:hover > ul,
+    .main-navigation li ul li:hover > ul {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+</style>
+
+
+
+        <br><br>
+
+        <main> <!-- MAIN -->
+
+            <section> <!-- À PROPOS -->
                 <h1> 🚀 À propos de moi 🚀 </h1>
                 <p>
                     Diplômé d'un <b>Master en Expert Marketing Digital</b> de l'ISD Flaubert depuis Juin 2024, 
@@ -374,7 +766,7 @@
                         <p> 
                             <b> Lubrizol France </b>
                             <br>
-                            <b> Assistant de Direction Usine - Stage Rémunéré </b>
+                            <b> Assitant de Direction Usine - Stage Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -410,7 +802,7 @@
                         <p> 
                             <b> Island Properties </b>
                             <br>
-                            <b> Assistant de Direction - Stage International Rémunéré </b>
+                            <b> Assitant de Direction - Stage International Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -444,27 +836,52 @@
 
         </main>
 
-        <section id="contact">
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
             <h2>Contact</h2>
-            <p> <b> LinkedIn </b> : <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> Guillaume BULLET </a></p>
-            <!-- <p> GitHub : <a class="lienParagraphe" href="https://github.com/GuiB2776" target="_blank"> Guillaume BULLET </a></p> -->
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+        
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
 
         <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
             &#8679; <!-- Flèche vers le haut -->
         </div>
 
-        <footer>
+        <footer>  <!-- FOOTER & SOCKET -->
 
-            <div class="socket">
-                <p> &copy; 2025 <!-- © --> Guillaume BULLET | Tous droits réservés. </p>
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
             </div>
-
-        </footer>
+          </footer>
 
     </body>
 
-    <!-- fichiers JavaScript -->
-    <script src="script.js"> </script>
+    <!-- FICHIERS JavaScript -->
+    <script src="test.js"> </script>
+    <script src="contact.js"></script>
+    <script src="footer.js"> </script>
 
 </html>

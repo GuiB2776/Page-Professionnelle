@@ -2,41 +2,95 @@
 <html lang="fr">
 
     <head>
-        <!-- méta données -->
+        <!-- MÉTADONNÉES -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guillaume BULLET</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <!-- fichiers CSS -->
+        <!-- FICHIERS CSS -->
         <link rel="stylesheet" href="test.css">
         <link rel="stylesheet" href="headerNav.css">
         <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="footer.css">
-
-
-
     </head>
 
 
     <body>
 
-        <header>
-            <div class="header-container">
-                <!-- Titre principal -->
-                <h1 class="site-title">Guillaume BULLET</h1>
-                <!-- Menu principal -->
-                <nav>
-                    <ul id="mainMenu"></ul>
-                </nav>
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Titre principal -->
+             <br>
+            <h1 class="site-title">Guillaume BULLET</h1>
+            <!-- Menu Navigation Principal -->
+            <div id="mainNavMenu">
+                <ul class="main-navigation">
+                    <li><a href="#"> À Propos </a>
+                        <ul>
+                            <li><a href="#apropos">À propos de moi</a></li>
+                            <li><a href="#formations">Formations</a>
+                                <ul>
+                                    <li><a href="#m2">M2</a></li>
+                                    <li><a href="#bachelor">Bachelor</a></li>
+                                    <li><a href="#bts">BTS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#experiences">Expériences</a>
+                                <ul>
+                                    <li><a href="#flornitur">Flornitur (ELONIX)</a></li>
+                                    <li><a href="#akutiga">AKUTIGA</a></li>
+                                    <li><a href="#alternativecontainer">Alternative Container</a></li>
+                                    <li><a href="#lubrizolfrance">Lubrizol France</a></li>
+                                    <li><a href="#islandproperties">Island Properties</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Front End Design </a>
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Front End Design </a>
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </header>
 
-        <br><br>
+        <br>
 
-        <main>
+        <main> <!-- MAIN -->
 
-            <section>
-                <h1> 🚀 À propos de moi 🚀 </h1>
+            <section id="apropos"> <!-- À PROPOS -->
+                <h2> 🚀 À propos de moi 🚀 </h2>
                 <p>
                     Diplômé d'un <b>Master en Expert Marketing Digital</b> de l'ISD Flaubert depuis Juin 2024, 
                     après avoir acquis un <b>Bachelor en Chef de Projet Digital</b> à la Normandie Web School 
@@ -51,10 +105,10 @@
                 </p>
             </section>
 
-            <section> <!-- FORMATIONS -->
+            <section id="formations"> <!-- FORMATIONS -->
                 <h2> 🎓 Formation Académique 🎓 </h2>
                 <section>
-                    <div> <!-- M2 -->
+                    <div id="m2"> <!-- M2 -->
                         <p>
                             <a class="lienParagraphe" href="https://www.francecompetences.fr/recherche/rncp/27057/"> Bac+5 Expert Marketing Digital </a> 
                             <br>
@@ -107,7 +161,7 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- BACHELOR -->
+                    <div id="bachelor"> <!-- BACHELOR -->
                         <p> 
                             <a class="lienParagraphe" href="https://www.francecompetences.fr/recherche/rncp/36011/"> Bac+3 Chef de Projet Digital </a>
                             <br>
@@ -156,7 +210,7 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- BTS -->
+                    <div id="bts"> <!-- BTS -->
                         <p> 
                             <a class="lienParagraphe" href="https://www.francecompetences.fr/recherche/rncp/10023/"> BTS Assistant de Manager </a> 
                             <br>
@@ -205,10 +259,10 @@
                 </section>
             </section>
 
-            <section> <!-- EXPÉRIENCES PROFESSIONNELLES -->
+            <section id="experiences"> <!-- EXPÉRIENCES PROFESSIONNELLES -->
                 <h2> 💼 Expériences Professionnelles 💼 </h2>
                 <section>
-                    <div> <!-- ELONIX -->
+                    <div id="elonix"> <!-- ELONIX -->
                         <p> 
                             <b> Flornitur ( ELONIX ) </b>
                             <br>
@@ -256,7 +310,7 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- AKUTIGA -->
+                    <div id="akutiga"> <!-- AKUTIGA -->
                         <p> 
                             <b> AKUTIGA </b>
                             <br>
@@ -304,7 +358,7 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- Alternative Container -->
+                    <div id="alternativecontainer"> <!-- Alternative Container -->
                         <p> 
                             <b> Alternative Container </b>
                             <br>
@@ -338,11 +392,11 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- Lubrizol France -->
+                    <div id="lubrizolfrance"> <!-- Lubrizol France -->
                         <p> 
                             <b> Lubrizol France </b>
                             <br>
-                            <b> Assitant de Direction Usine - Stage Rémunéré </b>
+                            <b> Assistant de Direction Usine - Stage Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -374,11 +428,11 @@
                     <br>
                     <hr>
                     <br>
-                    <div> <!-- Island Properties -->
+                    <div id="islandproperties"> <!-- Island Properties -->
                         <p> 
                             <b> Island Properties </b>
                             <br>
-                            <b> Assitant de Direction - Stage International Rémunéré </b>
+                            <b> Assistant de Direction - Stage International Rémunéré </b>
                             <br>
                             <b> 2017 </b>
                             <br>
@@ -412,7 +466,7 @@
 
         </main>
 
-        <section id="contact">
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
             <h2>Contact</h2>
             <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
         
@@ -438,7 +492,7 @@
             &#8679; <!-- Flèche vers le haut -->
         </div>
 
-        <footer>
+        <footer>  <!-- FOOTER & SOCKET -->
 
             <div class="socket" class="borderSocket">
                 <div class="socket-left">
@@ -455,7 +509,7 @@
 
     </body>
 
-    <!-- fichiers JavaScript -->
+    <!-- FICHIERS JavaScript -->
     <script src="test.js"> </script>
     <script src="headerNav.js"> </script>
     <script src="contact.js"></script>

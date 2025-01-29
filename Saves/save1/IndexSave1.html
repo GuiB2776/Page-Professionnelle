@@ -24,7 +24,87 @@
 
         <header> <!-- HEADER & MENU PRINCIPAL -->
             <!-- Menu Navigation Principal -->
-            <div id="menu-container"> <!-- fichier headerNav.js-->
+            <div id="mainNavMenu">
+                <ul class="main-navigation">
+                    <li><a href="#"> À Propos De Moi</a> <!-- Liste page : A Propos -->
+                        <ul>
+                            <li><a href="#apropos">À propos de moi</a></li>
+                            <li><a href="#formations">Formations</a>
+                                <ul>
+                                    <li><a href="#m2">M2</a></li>
+                                    <li><a href="#bachelor">Bachelor</a></li>
+                                    <li><a href="#bts">BTS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#experiences">Expériences</a>
+                                <ul>
+                                    <li><a href="#flornitur">Flornitur (ELONIX)</a></li>
+                                    <li><a href="#akutiga">AKUTIGA</a></li>
+                                    <li><a href="#alternativecontainer">Alternative Container</a></li>
+                                    <li><a href="#lubrizolfrance">Lubrizol France</a></li>
+                                    <li><a href="#islandproperties">Island Properties</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#cv">Mon CV</a></li>
+                            <li><a href="#contact">Me Contacter</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
+                        <ul>
+                            <li><a href="#"> Qu'est ce que le Marketing ?</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> HTML CSS JavaScript </a> <!-- Liste Page : HTML CSS JavaScript -->
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Projets </a> <!-- Liste Page : Projets -->
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <!-- Titre principal -->
             <h1 class="site-title">Guillaume BULLET</h1>
@@ -387,9 +467,7 @@
 
             <section id="cv"> <!-- Mon CV -->
                 <h2> 📃 Télécharger mon CV 📃 </h2>
-                <!-- <iframe src="/documents/CV_Guillaume_BULLET_2025.pdf" width="100%" height="600px"></iframe> -->
                 <p> Cliquez sur le bouton ci-dessous pour télécharger le fichier PDF : </p>
-                <a class="download-btn" class="download-btn-cv" href="cv.html" >  Voir mon CV </a>
                 <a class="download-btn" class="download-btn-cv" href="/documents/CV_Guillaume_BULLET_2025.pdf" download="CV Guillaume BULLET 2025.pdf">  Télécharger le PDF </a>
                 <br><br>
             </section>
@@ -399,7 +477,7 @@
         <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
             <h2>Contact</h2>
             <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
-            <p> Ou via ce formulaire :</p>
+        
             <!-- Formulaire de contact -->
             <form id="contactForm">
                 <label for="name">Nom :</label>

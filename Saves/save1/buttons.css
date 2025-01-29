@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------/* BOUTONS /*------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* BOUTON DE TELECHARGEMENT */
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0077b6; /* Couleur principale */
+    border: 2px solid #005f8a; /* Bordure légèrement plus foncée */
+    border-radius: 8px; /* Coins arrondis */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  }
+  .download-btn:hover {
+    background-color: #005f8a; /* Couleur au survol */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+    transform: translateY(-2px); /* Légère élévation au survol */
+  }
+  .download-btn:active {
+    background-color: #004970; /* Couleur lors du clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre */
+    transform: translateY(0); /* Effet de clic */
+  }
+
+  /* BOUTON DE TELECHARGEMENT DU CV */
+  a .download-btn .download-btn-cv{
+    align-items: center;
+  }
+  /*--------------------------------------------------------------------------------------------------------------*/
+
+  

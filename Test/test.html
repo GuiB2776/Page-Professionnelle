@@ -10,6 +10,7 @@
         <!-- FICHIERS CSS -->
         <link rel="stylesheet" href="test.css">
         <link rel="stylesheet" href="headerNav.css">
+        <link rel="stylesheet" href="buttons.css">
         <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="footer.css">
     </head>
@@ -18,13 +19,10 @@
     <body>
 
         <header> <!-- HEADER & MENU PRINCIPAL -->
-            <!-- Titre principal -->
-             <br>
-            <h1 class="site-title">Guillaume BULLET</h1>
             <!-- Menu Navigation Principal -->
             <div id="mainNavMenu">
                 <ul class="main-navigation">
-                    <li><a href="#"> À Propos </a>
+                    <li><a href="#"> À Propos </a> <!-- Liste page : A Propos -->
                         <ul>
                             <li><a href="#apropos">À propos de moi</a></li>
                             <li><a href="#formations">Formations</a>
@@ -43,9 +41,11 @@
                                     <li><a href="#islandproperties">Island Properties</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#cv">Mon CV</a></li>
+                            <li><a href="#contact">Me Contacter</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"> Front End Design </a>
+                    <li><a href="#"> HTML CSS JavaScript </a> <!-- Liste Page : HTML CSS JavaScript -->
                         <ul>
                             <li><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a>
@@ -63,7 +63,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#"> Front End Design </a>
+                    <li><a href="#"> Projets </a> <!-- Liste Page : Projets -->
                         <ul>
                             <li><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a>
@@ -83,9 +83,9 @@
                     </li>
                 </ul>
             </div>
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
         </header>
-
-        <br>
 
         <main> <!-- MAIN -->
 
@@ -97,10 +97,10 @@
                     et un <b>BTS Assistant Manager</b> à l'Institut les Tourelles. 
                     <br><br>
                     Je suis passionné par le potentiel du web et du marketing numérique. 
-                    Ma formation m’a permis de développer une expertise technique et stratégique, m'orientant vers une spécialisation en création de sites web, 
+                    Ma formation m'a permis de développer une expertise technique et stratégique, m'orientant vers une spécialisation en création de sites web, 
                     analyse de données et en stratégies digitales.
                     <br><br>
-                    Je suis désireux de poursuivre la mise en pratique de mes compétences au sein d’une structure nécessiteuse de se développer sur le web. 
+                    Je suis désireux de poursuivre la mise en pratique de mes compétences au sein d'une structure nécessiteuse de se développer sur le web. 
                     Où je pourrai contribuer à des projets importants et dynamiques, tout en continuant à me perfectionner dans le domaine du marketing digital et du web.
                 </p>
             </section>
@@ -464,12 +464,18 @@
                 </section>
             </section>
 
+            <section id="cv"> <!-- MON CV -->
+                <h2> 📃 Télécharger mon CV 📃 </h2>
+                <p> Cliquez sur le bouton ci-dessous pour télécharger le fichier PDF : </p>
+                <a class="download-btn" href="/documents/CV_Guillaume_BULLET_2025.pdf" download="CV Guillaume BULLET 2025.pdf">  Télécharger le PDF </a>
+                <br><br>
+            </section>
+
         </main>
 
         <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
             <h2>Contact</h2>
             <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
-        
             <!-- Formulaire de contact -->
             <form id="contactForm">
                 <label for="name">Nom :</label>
@@ -493,7 +499,6 @@
         </div>
 
         <footer>  <!-- FOOTER & SOCKET -->
-
             <div class="socket" class="borderSocket">
                 <div class="socket-left">
                     <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
@@ -505,7 +510,7 @@
                     <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
                 </div>
             </div>
-          </footer>
+        </footer>
 
     </body>
 

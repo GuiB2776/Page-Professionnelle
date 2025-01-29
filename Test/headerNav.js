@@ -1,81 +1,106 @@
 ///--------------------------/// LIENS AUTOMATIQUES ///--------------------------///
 
-const menuItems = {
-    "À propos": {
-        "Formations": {
-            "Formation1": "#formation1",
-            "Formation2": "#formation2",
-            "Formation3": "#formation3",
-        },
-        "Expériences": {
-            "Job1": "#job1",
-            "Job2": "#job2",
-            "Job3": "#job3",
-            "Job4": "#job4",
-            "Job5": "#job5",
-        },
-    },
-    "Web Marketing": {
-        "PageMarketing1": {
-            "SousPageMarketing1-1": "#marketing1-1",
-            "SousPageMarketing1-2": "#marketing1-2",
-            "SousPageMarketing1-3": "#marketing1-3",
-        },
-        "PageMarketing2": {
-            "SousPageMarketing2-1": "#marketing2-1",
-            "SousPageMarketing2-2": "#marketing2-2",
-            "SousPageMarketing2-3": "#marketing2-3",
-        },
-        "PageMarketing3": {
-            "SousPageMarketing3-1": "#marketing3-1",
-            "SousPageMarketing3-2": "#marketing3-2",
-            "SousPageMarketing3-3": "#marketing3-3",
-        },
-    },
-    "ExemplesSuivants": {
-        "ExempleSuivant1": {
-            "SousExempleSuivant1-1": "#suivant1-1",
-            "SousExempleSuivant1-2": "#suivant1-2",
-            "SousExempleSuivant1-3": "#suivant1-3",
-        },
-        "ExempleSuivant2": {
-            "SousExempleSuivant2-1": "#suivant2-1",
-            "SousExempleSuivant2-2": "#suivant2-2",
-            "SousExempleSuivant2-3": "#suivant2-3",
-        },
-        "ExempleSuivant3": {
-            "SousExempleSuivant3-1": "#suivant3-1",
-            "SousExempleSuivant3-2": "#suivant3-2",
-            "SousExempleSuivant3-3": "#suivant3-3",
-        },
-    },
-};
+document.addEventListener("DOMContentLoaded", function() {
+    const navMenu = `
+        <div id="mainNavMenu">
+            <ul class="main-navigation">
+                <li><a href="#"> À Propos De Moi</a> <!-- Liste page : A Propos -->
+                    <ul>
+                        <li><a href="index.html#apropos">À propos de moi</a></li>
+                        <li><a href="index.html#formations">Formations</a>
+                            <ul>
+                                <li><a href="index.html#m2">M2</a></li>
+                                <li><a href="index.html#bachelor">Bachelor</a></li>
+                                <li><a href="index.html#bts">BTS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#experiences">Expériences</a>
+                            <ul>
+                                <li><a href="index.html#flornitur">Flornitur (ELONIX)</a></li>
+                                <li><a href="index.html#akutiga">AKUTIGA</a></li>
+                                <li><a href="index.html#alternativecontainer">Alternative Container</a></li>
+                                <li><a href="index.html#lubrizolfrance">Lubrizol France</a></li>
+                                <li><a href="index.html#islandproperties">Island Properties</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#cv">Mon CV</a></li>
+                        <li><a href="index.html#contact">Me Contacter</a></li>
 
-// Fonction pour générer le menu HTML
-function generateMenu(menuData, parentElement) {
-    for (const [label, value] of Object.entries(menuData)) {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
+                    </ul>
+                </li>
+                <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
+                    <ul>
+                        <li><a href="#"> Qu'est ce que le Marketing ?</a></li>
+                        <li><a href="#">CSS</a>
+                            <ul>
+                                <li><a href="#">Resets</a></li>
+                                <li><a href="#">Grids</a></li>
+                                <li><a href="#">Frameworks</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">JavaScript</a>
+                            <ul>
+                                <li><a href="#">Ajax</a></li>
+                                <li><a href="#">jQuery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"> HTML CSS JavaScript </a> <!-- Liste Page : HTML CSS JavaScript -->
+                    <ul>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a>
+                            <ul>
+                                <li><a href="#">Resets</a></li>
+                                <li><a href="#">Grids</a></li>
+                                <li><a href="#">Frameworks</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">JavaScript</a>
+                            <ul>
+                                <li><a href="#">Ajax</a></li>
+                                <li><a href="#">jQuery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"> Projets </a> <!-- Liste Page : Projets -->
+                    <ul>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a>
+                            <ul>
+                                <li><a href="#">Resets</a></li>
+                                <li><a href="#">Grids</a></li>
+                                <li><a href="#">Frameworks</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">JavaScript</a>
+                            <ul>
+                                <li><a href="#">Ajax</a></li>
+                                <li><a href="#">jQuery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    `;
 
-        if (typeof value === "string") {
-            a.href = value;
-        } else {
-            a.href = "#"; // Liens parents sans action
+    // Insère le menu dans l'élément avec l'ID "menu-container"
+    document.getElementById("menu-container").innerHTML = navMenu;
+});
+
+// Mettre en surbrillance le lien actif
+highlightActiveLink();
+
+// Fonction pour surligner le lien actif
+function highlightActiveLink() {
+    const links = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop(); // Récupère le nom du fichier actuel
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
         }
-
-        a.textContent = label;
-        li.appendChild(a);
-
-        if (typeof value === "object") {
-            const subMenu = document.createElement("ul");
-            generateMenu(value, subMenu);
-            li.appendChild(subMenu);
-        }
-
-        parentElement.appendChild(li);
-    }
+    });
 }
-
-// Injecte le menu dans la page
-const mainMenu = document.getElementById("mainMenu");
-generateMenu(menuItems, mainMenu);

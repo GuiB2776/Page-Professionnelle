@@ -10,61 +10,20 @@
 
 
 ///-------------------------------------------------------------------------------///
-///--------------------------/// GESTION DES ANCRES ///--------------------------///
+///-------------------------/// HAUTEUR SCROLL ANCRES///-------------------------///
 ///-----------------------------------------------------------------------------///
 
-document.addEventListener("DOMContentLoaded", function () {
-    const offset = 90; // Hauteur du menu fixe
+// améliore la hauteur du scroll pour les ancres de ??px de hauteur du Menu de Navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Empêche le comportement par défaut
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 90; // Hauteur du menu fixe
 
-    function smoothScroll(targetId) {
-        const target = document.getElementById(targetId);
-        if (target) {
-            setTimeout(() => {
-                window.scrollTo({
-                    top: target.offsetTop - offset,
-                    behavior: 'smooth'
-                });
-            }, 200); // Délai pour garantir que le DOM est prêt
-        }
-    }
-
-    function handleAnchorClick(e) {
-        const href = this.getAttribute("href");
-
-        if (href.startsWith("#")) {
-            e.preventDefault();
-            smoothScroll(href.substring(1));
-        } else if (href.includes(".html#")) {
-            e.preventDefault();
-            const [page, anchor] = href.split("#");
-            localStorage.setItem("scrollTarget", anchor);
-            window.location.href = page;
-        }
-    }
-
-    function attachAnchorEvents() {
-        document.querySelectorAll('a[href*="#"]').forEach(link => {
-            link.addEventListener('click', handleAnchorClick);
+        window.scrollTo({
+            top: target.offsetTop - offset, // Scroll ajusté
+            behavior: 'smooth' // Animation fluide
         });
-    }
-
-    // Attente de l'insertion du menu pour attacher les événements
-    const menuContainer = document.getElementById("menu-container");
-    if (menuContainer) {
-        const observer = new MutationObserver(() => {
-            attachAnchorEvents();
-            observer.disconnect(); // Stoppe l'observation après ajout
-        });
-        observer.observe(menuContainer, { childList: true });
-    }
-
-    // Gestion des ancres après chargement de la page
-    window.addEventListener("load", function () {
-        const storedAnchor = localStorage.getItem("scrollTarget") || window.location.hash.substring(1);
-        if (storedAnchor) {
-            localStorage.removeItem("scrollTarget");
-            smoothScroll(storedAnchor);
-        }
     });
 });
 

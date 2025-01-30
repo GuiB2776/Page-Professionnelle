@@ -1,112 +1,246 @@
-
-# TOUTES LES PAGES #
-
-Onglet :
-• 1 icon
-• 1 nom d'onglet
-
-Header :
-• 1ère ligne : Prénom & Nom
-• 2ème ligne : Menu
-    • À Propos
-    • Éxpériences :
-        • Entreprise 
-        • Entreprise
-        • etc...
-    • Projets : 
-        • Projets Professionnels
-        • Projets Étudiants
-        • etc...
-    • Connaissances : 
-        • Marketing Digital
-            • Notion 1
-            • Notion 2
-            • etc...
-        • IA
-        • Développement Front
-        • Bureautique
-        • OSINT
-
-# PAGE PRINCIPALE (À PROPOS) #
+J'ai besoin que tu me fasses un menu mobile et tablet burger que je mettrai dans un autre fichier JavaScript et CSS que ceux du menu de base pour ordinateur.
+Il faut que les 3 barres du menu se transforment en croix afin de pouvoir fermer le menu. 
+Il faut que chaque lien soit visible afin de pouvoir cliquer dessus et que l'utilisateur puisse scroll le menu afin de voir tous les liens. 
 
 
+<header> <!-- HEADER & MENU PRINCIPAL -->
+    <!-- Menu Navigation Principal -->
+    <div id="menu-container"> <!-- fichier headerNav.js-->
+    </div>
+    <!-- Titre principal -->
+    <h1 class="site-title">Guillaume BULLET</h1>
+</header>
 
+<style>
 
+    /*--------------------------------------------------------------------------------------------------------------*/
+    /*---------------------------------------/* HEADER & MENU NAV PRINCIPAL /*--------------------------------------*/
+    /*--------------------------------------------------------------------------------------------------------------*/
 
-# PAGE ÉXPÉRIENCES #
+    .site-title {
+        margin: 0;
+        padding-top: 60px;
+    }
 
-# PAGE PROJETS #
+    header {
+        background-color: #ffffff;
+        border-bottom: 2px solid #0077b6;
+    }
+    /* Conteneur principal du menu */
+    #mainNavMenu {
+        background-color: #0077b6; /* Couleur principale */
+        padding: 0px;
+        justify-items: center;
+        z-index: 1000;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
 
-# PAGE CONNAISSANCES #
+    /* Style de base des listes */
+    .main-navigation {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        height: 50px; /* hauteur du menu */
+    }
 
+    /* Style des liens principaux */
+    .main-navigation > li {
+        position: relative;
+        margin-right: 20px; /* Espacement horizontal */
+    }
 
+    .main-navigation > li > a {
+        display: block;
+        padding: 10px 10px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #0077b6;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
+    /* Hover sur les liens principaux */
+    .main-navigation > li > a:hover {
+        background-color: #005f8a;
+    }
 
-Refais moi le menu de navigation principal : 
-    - le titre et le menu de navigation principal doivent entrer dans le <header> sur 2 lignes
-    - ajoute un nouvel index pour le <header> afin qu'il reste visible lorsque l'utilisateur scroll sur la page 
-    - ajoute en javascript la gestion de chaque lien afin qu'ils soient gérés depuis le fichier JavaScript ce qui permettra de mettre à jour les liens depuis le fichier sur toutes les pages HTML en même temps sans avoir besoin de refaire chaque lien à la main
-    - refais l'ordre du menu principal en suivant cet index du menu : 
-        - À propos :
-            - Formations :
-                - Formation3
-                - Formation2
-                - Formation1
-            - Expériences :
-                - Job5
-                - Job4
-                - Job3
-                - Job2
-                - Job1
-        - Web Marketing :
-            - PageMarketing1 :
-                - SousPageMarketing1-1
-                - SousPageMarketing1-2
-                - SousPageMarketing1-3
-            - PageMarketing2 :
-                - SousPageMarketing2-1
-                - SousPageMarketing2-2
-                - SousPageMarketing2-2
-            - PageMarketing3 :
-                - SousPageMarketing3-1
-                - SousPageMarketing3-2
-                - SousPageMarketing3-3
-        - ExemplesSuivants :
-            - ExempleSuivant1 :
-                - SousExempleSuivant1-1
-                - SousExempleSuivant1-2
-                - SousExempleSuivant1-3
-            - ExempleSuivant2 :
-                - SousExempleSuivant2-1
-                - SousExempleSuivant2-2
-                - SousExempleSuivant2-3
-            - ExempleSuivant3 :
-                - SousExempleSuivant3-1
-                - SousExempleSuivant3-2
-                - SousExempleSuivant3-3
-                
+    /* Sous-menus */
+    .main-navigation li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0077b6; /* Couleur des sous-menus */
+        padding: 10px 0;
+        list-style: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+        border-radius: 5px;
+        z-index: 10; /* Toujours au-dessus */
+    }
 
+    /* Sous-menus des sous-menus */
+    .main-navigation li ul li ul {
+        left: 100%;
+        top: 0;
+        border-radius: 5px;
+    }
 
+    /* Liens des sous-menus */
+    .main-navigation li ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px; /* Légèrement plus petit que le menu principal */
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        white-space: nowrap; /* Évite que le texte déborde */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    }
 
-Assistance marketing
- 
-Systèmes de gestion de contenu (CMS)
- 
-HTML
- 
-Indicateurs clés de performance
- 
-Retour sur investissement
- 
-Marketing digital
- 
-Intégration de contenu
- 
-Maintenance du site internet
- 
-Site Vitrine
- 
-Site ecommerce
- 
-Newsletters
+    /* Hover sur les liens des sous-menus */
+    .main-navigation li ul li a:hover {
+        background-color: #005f8a; /* Couleur au survol */
+    }
 
+    /* Afficher les sous-menus au survol */
+    .main-navigation li:hover > ul {
+        display: block;
+    }
+
+    /* Afficher les sous-menus des sous-menus */
+    .main-navigation li ul li:hover > ul {
+        display: block;
+    }
+
+    /* Transition pour un effet de fluidité */
+    .main-navigation li ul,
+    .main-navigation li ul li ul {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    .main-navigation li:hover > ul,
+    .main-navigation li ul li:hover > ul {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+</style>
+
+<script>
+
+    ///--------------------------/// LIENS AUTOMATIQUES ///--------------------------///
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const navMenu = `
+            <div id="mainNavMenu">
+                <ul class="main-navigation">
+                    <li><a href="#"> À Propos De Moi</a> <!-- Liste page : A Propos -->
+                        <ul>
+                            <li><a href="index.html#apropos">À propos de moi</a></li>
+                            <li><a href="index.html#formations">Formations</a>
+                                <ul>
+                                    <li><a href="index.html#m2">M2</a></li>
+                                    <li><a href="index.html#bachelor">Bachelor</a></li>
+                                    <li><a href="index.html#bts">BTS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html#experiences">Expériences</a>
+                                <ul>
+                                    <li><a href="index.html#flornitur">Flornitur (ELONIX)</a></li>
+                                    <li><a href="index.html#akutiga">AKUTIGA</a></li>
+                                    <li><a href="index.html#alternativecontainer">Alternative Container</a></li>
+                                    <li><a href="index.html#lubrizolfrance">Lubrizol France</a></li>
+                                    <li><a href="index.html#islandproperties">Island Properties</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html#cv">Mon CV</a></li>
+                            <li><a href="index.html#contact">Me Contacter</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
+                        <ul>
+                            <li><a href="#"> Qu'est ce que le Marketing ?</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> HTML CSS JavaScript </a> <!-- Liste Page : HTML CSS JavaScript -->
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Projets </a> <!-- Liste Page : Projets -->
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a>
+                                <ul>
+                                    <li><a href="#">Resets</a></li>
+                                    <li><a href="#">Grids</a></li>
+                                    <li><a href="#">Frameworks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">JavaScript</a>
+                                <ul>
+                                    <li><a href="#">Ajax</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        `;
+
+        // Insère le menu dans l'élément avec l'ID "menu-container"
+        document.getElementById("menu-container").innerHTML = navMenu;
+    });
+
+    // Mettre en surbrillance le lien actif
+    highlightActiveLink();
+
+    // Fonction pour surligner le lien actif
+    function highlightActiveLink() {
+        const links = document.querySelectorAll("nav ul li a");
+        const currentPage = window.location.pathname.split("/").pop(); // Récupère le nom du fichier actuel
+
+        links.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    }
+</script>

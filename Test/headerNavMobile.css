@@ -1,0 +1,101 @@
+/* Cacher le menu burger par défaut */
+#burger-icon {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    width: 40px;
+    height: 35px;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 5px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Transforme les trois barres en croix quand le menu est ouvert */
+.open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.open .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Style du menu mobile */
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #0077b6;
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Lorsque le menu est actif */
+#mobile-nav.active {
+    left: 0;
+}
+
+/* Style des liens */
+.mobile-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-navigation li {
+    text-align: center;
+}
+
+.mobile-navigation a {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-navigation a:hover {
+    background-color: #005f8a;
+}
+
+/* Sous-menus */
+.mobile-navigation ul {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.mobile-navigation li:hover > ul {
+    display: block;
+}
+
+/* Responsive - Afficher le menu burger uniquement sur mobile/tablette */
+@media (max-width: 1024px) {
+    #burger-icon {
+        display: block;
+        background-color: #ffffff;
+        border: solid 2px black;
+        border-radius: 5px;
+    }
+
+    #mainNavMenu {
+        display: none;
+    }
+}
+
+
+
+

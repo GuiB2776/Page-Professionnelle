@@ -8,85 +8,21 @@ body {
     line-height: 1.6;
 }
 
-/*--------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------/* HEADER & MENU NAV PRINCIPAL /*--------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
-#menuPrincipal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+main {
+    padding-top: 10px;
 }
 
-header {
-    background-color: #0077b6; /* Bleu principal */
-    color: white;
-    padding: 10px 20px;
-}
-
-.siteTitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-}
-
-nav {
-    background: #023e8a; /* Bleu foncé */
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    position: relative;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #023e8a; /* Bleu foncé */
-    padding: 10px 0;
-    list-style: none;
-    border-radius: 4px;
-}
-
-nav ul li ul li {
-    margin: 0;
-    padding: 5px 20px;
-}
-
-nav ul li ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li:hover ul {
-    display: block;
-}
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------/* SECTIONS /*-----------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
+
+/* scroll de ??px sur les ancres pour le menu nav */
+/*
+[id] {
+    scroll-margin-top: 90px;
+}  
+*/
 
 section {
     padding: 20px;
@@ -138,28 +74,6 @@ ul li {
     text-decoration: underline;
 }
 
-/*--------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------/* FOOTER /*-----------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #023e8a; /* Bleu foncé */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #90e0ef; /* Bleu clair */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------/* ACCORDÉON /*-----------------------------------------------*/
@@ -217,14 +131,27 @@ footer a:hover {
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------/* SV SECTION /*-----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+#cv {
+    text-align: center;
+}
+
+#cv p {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------/* SCROLL TOP BUTTON /*-------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 
  /* Bouton "Retour en haut" */
  #scrollToTop {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     width: 50px;
     height: 50px;
     background-color: #0077b6; /* Bleu principal */

@@ -1,0 +1,119 @@
+/*--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------/* HEADER & MENU NAV PRINCIPAL /*--------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.site-title {
+    margin: 0;
+    padding-top: 60px;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #0077b6;
+}
+/* Conteneur principal du menu */
+#mainNavMenu {
+    background-color: #0077b6; /* Couleur principale */
+    padding: 0px;
+    justify-items: center;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+/* Style de base des listes */
+.main-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 50px; /* hauteur du menu */
+}
+
+/* Style des liens principaux */
+.main-navigation > li {
+    position: relative;
+    margin-right: 20px; /* Espacement horizontal */
+}
+
+.main-navigation > li > a {
+    display: block;
+    padding: 10px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #0077b6;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover sur les liens principaux */
+.main-navigation > li > a:hover {
+    background-color: #005f8a;
+}
+
+/* Sous-menus */
+.main-navigation li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0077b6; /* Couleur des sous-menus */
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    border-radius: 5px;
+    z-index: 10; /* Toujours au-dessus */
+}
+
+/* Sous-menus des sous-menus */
+.main-navigation li ul li ul {
+    left: 100%;
+    top: 0;
+    border-radius: 5px;
+}
+
+/* Liens des sous-menus */
+.main-navigation li ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; /* Légèrement plus petit que le menu principal */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Évite que le texte déborde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Hover sur les liens des sous-menus */
+.main-navigation li ul li a:hover {
+    background-color: #005f8a; /* Couleur au survol */
+}
+
+/* Afficher les sous-menus au survol */
+.main-navigation li:hover > ul {
+    display: block;
+}
+
+/* Afficher les sous-menus des sous-menus */
+.main-navigation li ul li:hover > ul {
+    display: block;
+}
+
+/* Transition pour un effet de fluidité */
+.main-navigation li ul,
+.main-navigation li ul li ul {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.main-navigation li:hover > ul,
+.main-navigation li ul li:hover > ul {
+    opacity: 1;
+    transform: translateY(0);
+}

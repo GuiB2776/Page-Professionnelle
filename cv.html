@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Guillaume BULLET </title>
+        <meta name="description" content="Découvrez mon parcours avec mes expériences, formations, compétences et mes informations de contact. Consultez mon CV en ligne pour en savoir plus sur mon expertise et mes projets.">
+        <meta name="keywords" content="CV, curriculum vitae, expériences professionnelles, formations, compétences, informations de contact, profil professionnel, mon parcours, développement de carrière, marketing, marketing digital, profil en ligne">
+        <meta name="robots" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/headerNav.css">
+        <link rel="stylesheet" href="/css/headerNavMobile.css">
+        <link rel="stylesheet" href="/css/buttons.css">
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main> <!-- MAIN -->
+
+            <section>
+                <h2> 📃 Curriculum Vitae 📃 </h2>
+                <iframe src="/documents/CV_Guillaume_BULLET_2025.pdf" width="100%" height="800px"></iframe>
+            </section>
+
+            <section id="cv"> <!-- Mon CV -->
+                <h2> 📃 Télécharger mon CV 📃 </h2>
+                <p> Cliquez sur le bouton ci-dessous pour télécharger le fichier PDF : </p>
+                <a class="download-btn" class="download-btn-cv" href="/documents/CV_Guillaume_BULLET_2025.pdf" download="CV Guillaume BULLET 2025.pdf">  Télécharger le PDF </a>
+                <br><br>
+            </section>
+
+        </main>
+
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+            <p> Ou via ce formulaire :</p>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+
+        <footer>  <!-- FOOTER & SOCKET -->
+
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <!-- FICHIERS JavaScript -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/headerNav.js"></script>
+    <script src="scripts/headerNavMobile.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/footer.js"></script>
+
+</html>

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </li>
                 <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
                     <ul>
-                        <li><a href="#"> Qu'est ce que le Marketing ?</a></li>
+                        <li><a href="#"> Qu'est ce que le Marketing Digital ?</a></li>
                         <li><a href="#">CSS</a>
                             <ul>
                                 <li><a href="#">Resets</a></li>

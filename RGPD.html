@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Guillaume BULLET </title>
+        <meta name="description" content="Découvrez mon parcours avec mes expériences, formations, compétences et mes informations de contact. Consultez mon CV en ligne pour en savoir plus sur mon expertise et mes projets.">
+        <meta name="keywords" content="CV, curriculum vitae, expériences professionnelles, formations, compétences, informations de contact, profil professionnel, mon parcours, développement de carrière, marketing, marketing digital, profil en ligne">
+        <meta name="robots" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/headerNav.css">
+        <link rel="stylesheet" href="css/headerNavMobile.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main> <!-- MAIN -->
+
+            <section>
+                <h1> Règles de Confidentialité (RGPD) </h1>
+                <br>
+                <h2>1. Collecte de données</h2>
+                <p>
+                    Ce site web a pour seul objectif de promouvoir mes compétences et connaissances tout en permettant aux utilisateurs de s'entrainer aux différentes composantes du marketing digital et du web.
+                    Je ne collectons aucune information personnelle vous concernant directement sur ce site.
+                    Toute collecte d'informations se fait par l'hébergeur du site web, conformément à ses propres règles de confidentialité. Veuillez vous référer à la politique de confidentialité de notre hébergeur pour plus d'informations.
+                </p>
+                <br>
+                <h2>2. Aucune création de compte ou d'inscription</h2>
+                <p>
+                    Ce site ne propose pas de fonctionnalité de création de compte ou d'inscription. 
+                    Vous pouvez accéder librement à mon contenu sans avoir à fournir d'informations personnelles.
+                </p>
+                <br>
+                <h2>3. Objectif du site</h2>
+                <p>
+                    Veuillez noter que ce site n'est pas géré par une société ou une personne publique. 
+                    Les informations fournies sur ce site sont uniquement à des fins éducatives et informatives. 
+                    Je ne suis pas responsables de l'utilisation que vous faites des informations présentées sur ce site.
+                </p>
+                <br>
+                <h2>4. Aucune visée commerciale</h2>
+                <p>
+                    Ce site web n'a aucune visée commerciale. Je ne collectons pas d'informations à des fins de marketing ou de publicité. 
+                    Je ne partage pas vos informations avec des tiers à des fins commerciales.
+                </p>
+                <br>
+                <h2>5. Liens externes</h2>
+                <p>
+                    Ce site peut contenir des liens vers des sites web externes qui sont fournis à titre de référence. 
+                    Je n'ai en aucun cas le contrôle sur le contenu de ces sites externes et décline toute responsabilité quant à leur contenu ou à leur utilisation.
+                </p>
+                <br>
+                <h2>6. Modifications des règles de confidentialité</h2>
+                <p>
+                    Je me réserve le droit de modifier ces Règles de Confidentialité à tout moment. 
+                    Je vous encourgae donc à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.
+                </p>
+                <br>
+                <h2>7. Contact</h2>
+                <p>
+                    Si vous avez des questions ou des préoccupations concernant nos Règles de Confidentialité, veuillez me contacter via le formulaire de contact suivant. 
+                </p>
+            </section>
+
+        </main>
+
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+
+        <footer>  <!-- FOOTER & SOCKET -->
+
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <!-- FICHIERS JavaScript -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/headerNav.js"></script>
+    <script src="scripts/headerNavMobile.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/footer.js"></script>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulateur de SERP pour vous entrainer avec les metadonnées</title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Optimisez vos balises meta avec mon Simulateur de SERP ! Visualisez en temps réel l'affichage de votre titre et description sur Google avant publication.">
+        <meta name="keywords" content="simulateur SERP, aperçu SERP, SEO, optimisation titre, meta description, référencement Google, test SERP, visualisation SERP, balises meta, outils SEO">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/headerNav.css">
+        <link rel="stylesheet" href="css/headerNavMobile.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/simulateurSERP.css">
+
+    </head>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main>
+
+            <p style="text-align: center; font-weight: bold;"> Simulateur de SERP pour navigateur web sur ordinateur </p>
+
+            <section class="section-simulateur-SERP">
+                <div class="container"> <!-- CHAMPS A REMPLIR -->
+                    <div class="input-panel">
+                        <h2 style="text-align: center;"> Entrez les informations </h2>
+                        <div class="input-group" id="site-group">
+                            <label for="site">Nom du site :</label>
+                            <input type="text" id="site" placeholder="Nom du site" oninput="updatePreview()">
+                            <div class="advice" id="site-advice"> Le nom de votre site doit contenir 60 caractères maximum.</div>
+                            <div class="char-count" id="site-count">0 / 60</div>
+                        </div>
+                        <div class="input-group" id="url-group">
+                            <label for="url">URL :</label>
+                            <input type="text" id="url" placeholder="https://exemple.com" oninput="updatePreview()">
+                            <div class="advice" id="url-advice"> L'URL doit être lisible, concise et commencer par "http://" ou "https://".</div>
+                        </div>
+                        <div class="input-group" id="title-group">
+                            <label for="title">Titre :</label>
+                            <input type="text" id="title" placeholder="Titre de la page" oninput="updatePreview()">
+                            <div class="advice" id="title-advice"> Le titre doit contenir entre 50 et 60 caractères.</div>
+                            <div class="char-count" id="title-count">0 / 60</div>
+                        </div>
+                        <div class="input-group" id="description-group">
+                            <label for="description">Meta Description :</label>
+                            <textarea id="description" placeholder="Description de la page" oninput="updatePreview()"></textarea>
+                            <div class="advice" id="description-advice"> La description doit être entre 140 et 160 caractères.</div>
+                            <div class="char-count" id="description-count">0 / 160</div>
+                        </div>
+                    </div>
+                    <div class="preview-panel"> <!-- SIMULATION -->
+                        <h2 style="text-align: center;"> Aperçu SERP </h2>
+                        <hr>
+                        <div class="serp-result">
+                            <div class="serp-site">Pub Optimisée</div>
+                            <div class="serp-url"><span>https://www.pub-optimisee.com</span></div>
+                            <div class="ad">Annonce</div>
+                            <div class="serp-title">Découvrez tous nos conseils SEO pour votre site internet</div>
+                            <div class="serp-description">Des offres exclusives avec livraison rapide et satisfaction garantie. Apprenez à améliorer votre visibilité avec nos conseils experts. Apprenez vite !</div>
+                        </div>
+                        <div class="serp-result">
+                            <div class="serp-site">Les Astuces SEO</div>
+                            <div class="serp-url"><span>https://www.astuces-seo.fr</span></div>
+                            <div class="serp-title">Astuces SEO pour optimiser votre site</div>
+                            <div class="serp-description">Découvrez toutes les bonnes pratiques SEO pour améliorer les performances de votre site internet et devenir un véritable web marketer pour votre entreprise.</div>
+                        </div>
+                        <div class="serp-result" id="serp-result-modified">
+                            <div class="serp-site" id="preview-site">Nom du site</div>
+                            <div class="serp-url" id="preview-url"><span>https://exemple.com</span></div>
+                            <div class="serp-title" id="preview-title">Titre de la page</div>
+                            <div class="serp-description" id="preview-description">Description de la page</div>
+                        </div>
+                        <div class="serp-result">
+                            <div class="serp-site">Simulateur de SERP</div>
+                            <div class="serp-url"><span>https://www.simulateur-de-serp.com</span></div>
+                            <div class="serp-title">Simulateur SEO pour vous entrainer à rédiger des metadonnées</div>
+                            <div class="serp-description">Le simulateur de SERP permet de visualiser les balises meta d'une page web dans les résultats de Google. Pourquoi est-ce intéressant en SEO ?</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <br>
+
+            <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+                <h2>Contact</h2>
+                <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+                <p> Ou via ce formulaire :</p>
+                <!-- Formulaire de contact -->
+                <form id="contactForm">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+            
+                    <label for="subject">Sujet :</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+            
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+    
+            <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+                &#8679; <!-- Flèche vers le haut -->
+            </div>
+    
+            <footer>  <!-- FOOTER & SOCKET -->
+    
+                <div class="socket" class="borderSocket">
+                    <div class="socket-left">
+                        <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                    </div>
+                    <div class="socket-center">
+                        <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                    </div>
+                    <div class="socket-right">
+                        <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+    </body>
+
+        <!-- FICHIERS JavaScript -->
+        <script src="scripts/script.js"></script>
+        <script src="scripts/headerNav.js"></script>
+        <script src="scripts/headerNavMobile.js"></script>
+        <script src="scripts/contact.js"></script>
+        <script src="scripts/footer.js"></script>
+        <script src="scripts/simulateurSERP.js"></script>
+
+</html>

@@ -1,0 +1,115 @@
+.section-simulateur-SERP
+{
+    max-width: 1500px;
+}
+.container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.input-panel {
+    width: 50%;
+}
+.preview-panel {
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+#serp-result-modified {
+    background-color: #f8f8f8;
+}
+.serp-result {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.serp-site {
+    font-size: 18px;
+    color: #242424;
+    /* color: #545454; */
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 652px;
+}
+.serp-title {
+    font-size: 18px;
+    color: #1a0dab;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 652px;
+}
+.serp-url {
+    font-size: 14px;
+    color: #202124;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.serp-url span {
+    color: #5f6368;
+}
+.serp-description {
+    font-size: 14px;
+    color: #242424;
+    /* color: #545454; */
+    margin-top: 5px;
+    max-width: 652px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+}
+.ad {
+    color: #34a853;
+    font-weight: bold;
+    font-size: 14px;
+}
+.input-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: #eef6ff;
+}
+.input-group input, .input-group textarea {
+    width: 95%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    resize: vertical;
+    min-height: 30px;
+}
+.input-group textarea {
+    min-height: 60px;
+    overflow-y: auto;
+}
+.advice {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background: #d9edf7;
+    color: #31708f;
+}
+.valid {
+    border-color: green;
+}
+.warning {
+    border-color: orange;
+}
+.error {
+    border-color: red;
+}
+.char-count {
+    font-size: 12px;
+    color: #555;
+    margin-top: 2px;
+}

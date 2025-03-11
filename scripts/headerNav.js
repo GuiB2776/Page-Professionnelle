@@ -30,13 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
                     <ul>
                         <li><a href="marketingDigital.html"> Qu'est ce que le Marketing Digital ?</a></li>
-                        <li><a href="#">CSS</a>
-                            <ul>
-                                <li><a href="#">Resets</a></li>
-                                <li><a href="#">Grids</a></li>
-                                <li><a href="#">Frameworks</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="simulateurSERP.html">Simulateur SERP</a></li>
                         <li><a href="#">JavaScript</a>
                             <ul>
                                 <li><a href="#">Ajax</a></li>

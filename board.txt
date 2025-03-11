@@ -1,47 +1,54 @@
 Page 1 : Introduction au Marketing Digital
-Qu'est-ce que le Marketing Digital ?
-L’évolution du marketing traditionnel vers le marketing digital
-Les avantages du marketing digital
-Les principaux canaux du marketing digital
+    Qu'est-ce que le Marketing Digital ?
+    L’évolution du marketing traditionnel vers le marketing digital
+    Les avantages du marketing digital
+    Les principaux canaux du marketing digital
+
 Page 2 : Création et Optimisation de la Présence en Ligne
-L’importance d’un site web performant
-Introduction au SEO (Search Engine Optimization)
-Optimisation du contenu pour le SEO
-La structure d'un site web : navigation, vitesse, expérience utilisateur (UX)
-Le rôle du responsive design (adaptabilité mobile)
+    L’importance d’un site web performant
+    Introduction au SEO (Search Engine Optimization)
+    Optimisation du contenu pour le SEO
+    La structure d'un site web : navigation, vitesse, expérience utilisateur (UX)
+    Le rôle du responsive design (adaptabilité mobile)
+
 Page 3 : Publicité en Ligne
-Introduction à la publicité payante (SEA)
-Google Ads : types de campagnes et fonctionnement
-Les publicités sur les réseaux sociaux (Facebook Ads, Instagram Ads, LinkedIn Ads)
-Stratégies de ciblage pour la publicité en ligne
-Mesurer et ajuster les campagnes publicitaires
+    Introduction à la publicité payante (SEA)
+    Google Ads : types de campagnes et fonctionnement
+    Les publicités sur les réseaux sociaux (Facebook Ads, Instagram Ads, LinkedIn Ads)
+    Stratégies de ciblage pour la publicité en ligne
+    Mesurer et ajuster les campagnes publicitaires
+
 Page 4 : Marketing de Contenu
-L’importance du contenu dans le marketing digital
-Types de contenu : blogs, vidéos, infographies, podcasts
-Créer un calendrier éditorial
-Stratégies de contenu pour attirer et fidéliser les visiteurs
-SEO et marketing de contenu : comment les lier efficacement
+    L’importance du contenu dans le marketing digital
+    Types de contenu : blogs, vidéos, infographies, podcasts
+    Créer un calendrier éditorial
+    Stratégies de contenu pour attirer et fidéliser les visiteurs
+    SEO et marketing de contenu : comment les lier efficacement
+
 Page 5 : Email Marketing et Automatisation
-Introduction à l'email marketing
-Créer des listes de diffusion segmentées
-Types de campagnes : newsletters, promotions, emails de relance
-Outils d’automatisation et CRM
-Mesurer l’efficacité des campagnes d'emailing
+    Introduction à l'email marketing
+    Créer des listes de diffusion segmentées
+    Types de campagnes : newsletters, promotions, emails de relance
+    Outils d’automatisation et CRM
+    Mesurer l’efficacité des campagnes d'emailing
+
 Page 6 : Réseaux Sociaux et Community Management
-Les principaux réseaux sociaux pour le marketing digital
-Stratégies de contenu adaptées aux réseaux sociaux
-Gérer et animer une communauté en ligne
-L’importance de l’engagement et de la modération
-Mesurer les performances sur les réseaux sociaux (KPIs)
+    Les principaux réseaux sociaux pour le marketing digital
+    Stratégies de contenu adaptées aux réseaux sociaux
+    Gérer et animer une communauté en ligne
+    L’importance de l’engagement et de la modération
+    Mesurer les performances sur les réseaux sociaux (KPIs)
+
 Page 7 : Analyse de Données et ROI
-Pourquoi l’analyse des données est cruciale ?
-Introduction à Google Analytics et autres outils
-Suivi des performances : indicateurs clés de performance (KPIs)
-Mesurer le retour sur investissement (ROI)
-Optimiser les campagnes en fonction des données
+    Pourquoi l’analyse des données est cruciale ?
+    Introduction à Google Analytics et autres outils
+    Suivi des performances : indicateurs clés de performance (KPIs)
+    Mesurer le retour sur investissement (ROI)
+    Optimiser les campagnes en fonction des données
+
 Page 8 : Tendances et Innovations en Marketing Digital
-L’intelligence artificielle et le marketing digital
-Le marketing d’influence
-La recherche vocale et l’optimisation pour la recherche
-Le marketing vidéo et la réalité augmentée
-L'avenir du marketing digital
+    L’intelligence artificielle et le marketing digital
+    Le marketing d’influence
+    La recherche vocale et l’optimisation pour la recherche
+    Le marketing vidéo et la réalité augmentée
+    L'avenir du marketing digital

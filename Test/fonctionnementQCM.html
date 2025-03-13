@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>QCM - Questionnaire à Choix Multiples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #score {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .question {
+      border: 2px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .question.correct {
+      border-color: green;
+      background-color: #e6ffe6;
+    }
+    .question.partial {
+      border-color: orange;
+      background-color: #fff5e6;
+    }
+    .question.incorrect {
+      border-color: red;
+      background-color: #ffe6e6;
+    }
+    .explanation {
+      margin-top: 10px;
+      font-style: italic;
+    }
+    #nextLessonButton {
+      display: none;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      display: block;
+    }
+    .option-label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Questionnaire à Choix Multiples</h1>
+  <div id="score">Score : 0/20</div>
+  <div id="questionsContainer">
+    <!-- Les questions seront injectées ici -->
+  </div>
+  <button id="nextLessonButton" onclick="goToNextLesson()">Accéder à la leçon suivante</button>
+
+  <script>
+    // Tableau des 20 questions
+    // Chaque question est un objet contenant :
+    // - question : le texte de la question
+    // - options : un tableau d'options (chaque option a "text" et "correct" indiquant si elle est correcte)
+    // - explanation : une explication à afficher après validation
+    const questions = [
+      {
+        question: "Question 1 : Quel est le langage utilisé pour structurer une page web ?",
+        options: [
+          { text: "HTML", correct: true },
+          { text: "CSS", correct: false },
+          { text: "JavaScript", correct: false },
+          { text: "SQL", correct: false }
+        ],
+        explanation: "HTML (HyperText Markup Language) permet de structurer le contenu d'une page web."
+      },
+      // Exemple de question à plusieurs réponses correctes
+      {
+        question: "Question 2 : Parmi ces langages, lesquels sont utilisés côté client ? (plusieurs réponses possibles)",
+        options: [
+          { text: "HTML", correct: true },
+          { text: "CSS", correct: true },
+          { text: "PHP", correct: false },
+          { text: "JavaScript", correct: true }
+        ],
+        explanation: "HTML, CSS et JavaScript sont utilisés côté client pour créer et styliser l'interface."
+      }
+    ];
+
+    // Pour l'exemple, nous générons 18 questions supplémentaires génériques
+    for (let i = 3; i <= 20; i++) {
+      questions.push({
+        question: "Question " + i + " : Exemple de question " + i + ".",
+        options: [
+          { text: "Option A", correct: (i % 2 === 0) },
+          { text: "Option B", correct: (i % 2 !== 0) },
+          { text: "Option C", correct: false },
+          { text: "Option D", correct: false }
+        ],
+        explanation: "Explication de la question " + i + "."
+      });
+    }
+
+    let totalScore = 0;
+    let answeredQuestions = 0;
+
+    // Mise à jour de l'affichage du score
+    function updateScore() {
+      document.getElementById('score').textContent = "Score : " + totalScore + "/20";
+    }
+
+    // Vérifie si toutes les questions ont été répondues
+    // Si le score est d'au moins 16, le bouton pour la leçon suivante s'affiche
+    function checkAllAnswered() {
+      if (answeredQuestions === questions.length) {
+        if (totalScore >= 16) {
+          document.getElementById('nextLessonButton').style.display = 'block';
+        } else {
+          alert("Votre score final est de " + totalScore + ". Vous devez obtenir au moins 16 points pour accéder à la leçon suivante.");
+        }
+      }
+    }
+
+    // Fonction de validation d'une question donnée (qIndex correspond à l'indice de la question)
+    function validateQuestion(qIndex) {
+      const questionDiv = document.getElementById('question-' + qIndex);
+      const checkboxes = questionDiv.querySelectorAll('input[type="checkbox"]');
+      const selected = [];
+      checkboxes.forEach((cb, index) => {
+        if (cb.checked) {
+          selected.push(index.toString());
+        }
+      });
+
+      // Désactive les options et le bouton de validation pour éviter la modification après réponse
+      checkboxes.forEach(cb => cb.disabled = true);
+      const validateBtn = questionDiv.querySelector('button');
+      validateBtn.disabled = true;
+
+      // Récupération des indices des bonnes réponses pour cette question
+      const correctAnswers = questions[qIndex].options
+                              .map((opt, index) => opt.correct ? index.toString() : null)
+                              .filter(v => v !== null);
+
+      let pointsAwarded = 0;
+      let resultClass = "";
+      let resultText = "";
+
+      // Vérifie si au moins une bonne réponse est cochée
+      const selectedCorrect = selected.filter(val => correctAnswers.includes(val));
+
+      if (selectedCorrect.length === 0) {
+        // Aucune bonne réponse n'a été cochée
+        resultClass = "incorrect";
+        resultText = "Mauvaise réponse. " + questions[qIndex].explanation;
+        pointsAwarded = 0;
+      } else if (
+        selected.length === correctAnswers.length &&
+        selected.every(val => correctAnswers.includes(val))
+      ) {
+        // Toutes les bonnes réponses (et uniquement celles-ci) ont été cochées
+        resultClass = "correct";
+        resultText = "Bonne réponse ! " + questions[qIndex].explanation;
+        pointsAwarded = 1;
+      } else {
+        // Réponse partielle (certaines bonnes réponses manquantes ou réponses en trop)
+        resultClass = "partial";
+        // Affichage de toutes les bonnes réponses attendues
+        const bonnesReponses = correctAnswers.map(i => questions[qIndex].options[i].text).join(", ");
+        resultText = "Réponse partielle. Les bonnes réponses sont : " + bonnesReponses + ". " + questions[qIndex].explanation;
+        pointsAwarded = 0.5;
+      }
+
+      totalScore += pointsAwarded;
+      answeredQuestions++;
+      updateScore();
+
+      questionDiv.classList.add(resultClass);
+      const explanationDiv = document.createElement('div');
+      explanationDiv.className = 'explanation';
+      explanationDiv.textContent = resultText;
+      questionDiv.appendChild(explanationDiv);
+
+      checkAllAnswered();
+    }
+
+    // Fonction pour charger les questions dans le container
+    function loadQuestions() {
+      const container = document.getElementById('questionsContainer');
+      questions.forEach((q, index) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'question';
+        qDiv.id = 'question-' + index;
+
+        const qText = document.createElement('p');
+        qText.textContent = q.question;
+        qDiv.appendChild(qText);
+
+        // Création des options sous forme de checkbox
+        q.options.forEach((opt, i) => {
+          const label = document.createElement('label');
+          label.className = "option-label";
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.value = i;
+          label.appendChild(checkbox);
+          label.appendChild(document.createTextNode(" " + opt.text));
+          qDiv.appendChild(label);
+        });
+
+        // Bouton de validation pour la question
+        const btn = document.createElement('button');
+        btn.textContent = "Valider";
+        btn.addEventListener('click', function() {
+          validateQuestion(index);
+        });
+        qDiv.appendChild(btn);
+
+        container.appendChild(qDiv);
+      });
+    }
+
+    // Redirection vers la page de la leçon suivante
+    function goToNextLesson() {
+      window.location.href = "lecon_suivante.html";
+    }
+
+    // Initialisation du QCM
+    loadQuestions();
+    updateScore();
+  </script>
+</body>
+</html>

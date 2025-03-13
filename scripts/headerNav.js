@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navMenu = `
         <div id="mainNavMenu">
             <ul class="main-navigation">
-                <li><a href="#"> À Propos De Moi</a> <!-- Liste page : A Propos -->
+                <li><a href="#"> À Propos De Moi</a> <!-- Menu : A Propos -->
                     <ul>
                         <li><a href="index.html#apropos">À propos de moi</a></li>
                         <li><a href="index.html#formations">Formations</a>
@@ -27,19 +27,29 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li><a href="index.html#contact">Me Contacter</a></li>
                     </ul>
                 </li>
-                <li><a href="#"> Marketing Digital </a> <!-- Liste Page : HTML CSS JavaScript -->
+                <li><a href="#"> Marketing Digital </a> <!-- Menu : Marketing Digital -->
                     <ul>
-                        <li><a href="marketingDigital.html"> Qu'est ce que le Marketing Digital ?</a></li>
-                        <li><a href="simulateurSERP.html">Simulateur SERP</a></li>
-                        <li><a href="#">JavaScript</a>
+                        <li><a href="marketingDigital.html"> Qu'est ce que le Marketing Digital ?</a>
                             <ul>
-                                <li><a href="#">Ajax</a></li>
-                                <li><a href="#">jQuery</a></li>
+                                <li><a href="seFormerAuMarketingDigital.html">Se Former au Marketing Digital</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="outilsDeMarketingDigital.html"> Outils </a>
+                            <ul>
+                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
+                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
+                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="qcm.html">Exemple de QCM</a>
+                            <ul>
+                                <li><a href="#">-</a></li>
+                                <li><a href="#">-</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="#"> HTML CSS JavaScript </a> <!-- Liste Page : HTML CSS JavaScript -->
+                <li><a href="#"> HTML CSS JavaScript </a> <!-- Menu : HTML CSS JavaScript -->
                     <ul>
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a>
@@ -57,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </li>
                     </ul>
                 </li>
-                <li><a href="#"> Projets </a> <!-- Liste Page : Projets -->
+                <li><a href="#"> Projets </a> <!-- Menu : Projets -->
                     <ul>
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a>

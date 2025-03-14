@@ -1,0 +1,70 @@
+/* Styles spécifiques pour le générateur d'URL UTM */
+.utm-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.utm-title {
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.utm-label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.utm-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.utm-info {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.utm-button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+}
+
+.utm-button:hover {
+    background-color: #0056b3;
+}
+
+.utm-copy {
+    background-color: #28a745;
+}
+
+.utm-copy:hover {
+    background-color: #218838;
+}
+
+.utm-output {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    word-break: break-all;
+    border-radius: 5px;
+    font-size: 1em;
+}

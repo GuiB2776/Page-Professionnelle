@@ -1,0 +1,77 @@
+1. Simulateur de SERP (déjà en cours)
+Permet de visualiser l’apparence d’une page sur Google en fonction du titre, de la méta-description et de l’URL.
+
+
+2. Générateur d’URL UTM
+🔹 Outil pour générer facilement des liens avec des paramètres UTM (utm_source, utm_medium, utm_campaign) pour le suivi des campagnes dans Google Analytics.
+✅ Fonctionnalités :
+Champs pour entrer l'URL, la source, le medium, la campagne, le terme et le contenu.
+Bouton pour copier l’URL générée.
+Affichage en temps réel.
+
+
+3. Vérificateur de balises Open Graph et Twitter Card
+🔹 Vérifie si une page est bien optimisée pour l'affichage sur Facebook, Twitter et LinkedIn.
+✅ Fonctionnalités :
+Entrée d’une URL.
+Analyse des balises OG (title, description, image, type, etc.) et Twitter Card.
+Aperçu de l'affichage sur chaque plateforme.
+
+
+4. Score de Lisibilité SEO (Flesch-Kincaid)
+🔹 Analyse le contenu d'une page pour évaluer sa lisibilité selon l'indice Flesch-Kincaid.
+✅ Fonctionnalités :
+Coller ou entrer un texte.
+Affichage du score de lisibilité.
+Recommandations sur la simplification du texte.
+
+
+5. Générateur de balises Schema.org (JSON-LD)
+🔹 Génère du JSON-LD pour les données structurées selon le type de contenu (Article, Produit, Événement, etc.).
+✅ Fonctionnalités :
+Sélection du type de balisage (Article, FAQ, Review, etc.).
+Champs pour remplir les informations (titre, description, note, auteur…).
+Génération du JSON-LD à copier/coller dans le site.
+
+
+6. Simulateur de Pixel Facebook & Google Tag Manager
+🔹 Permet de tester si le Facebook Pixel et le Google Tag Manager sont bien installés sur une page.
+✅ Fonctionnalités :
+Entrer une URL et vérifier la présence des scripts.
+Détection des événements actifs (PageView, AddToCart, Purchase…).
+Alerte si des balises sont manquantes.
+
+
+7. Générateur de robots.txt et Sitemap.xml
+🔹 Génère automatiquement un fichier robots.txt et un sitemap.xml en fonction des pages à indexer.
+✅ Fonctionnalités :
+Liste des URL à inclure/exclure.
+Génération dynamique des fichiers.
+Vérification des erreurs courantes.
+
+
+8. Vérificateur de vitesse de chargement simplifié
+🔹 Un outil pour tester les performances d’une page avec les données Lighthouse.
+✅ Fonctionnalités :
+Entrer une URL et récupérer des indicateurs clés :
+Time to First Byte (TTFB)
+Largest Contentful Paint (LCP)
+Cumulative Layout Shift (CLS)
+Suggestions d'optimisation.
+
+
+9. Générateur de Meta Tags & Favicon Checker
+🔹 Vérifie si toutes les balises META essentielles sont bien en place et génère une favicon optimisée.
+✅ Fonctionnalités :
+Analyse des balises <title>, <meta description>, <meta keywords>, Open Graph.
+Détection de la favicon et de ses versions mobiles.
+
+
+10. Analyseur de texte pour le SEO (Mots-clés, densité, etc.)
+🔹 Permet d’analyser un texte pour repérer :
+La densité des mots-clés.
+La longueur des phrases.
+La présence de mots-clés secondaires.
+
+
+11. Outil de gestion de projet ( Trello ) 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Générateur d'URL UTM pour les Analytics et le Tracking </title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Générez facilement des liens UTM pour suivre et analyser l'origine de votre trafic dans Google Analytics. Optimisez vos campagnes marketing avec des URL traçables.">
+        <meta name="keywords" content="générateur UTM, URL tracking, suivi de trafic, Google Analytics, marketing digital, paramètre UTM, campagne publicitaire, référencement, SEO, suivi des conversions">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/headerNav.css">
+        <link rel="stylesheet" href="/css/headerNavMobile.css">
+        <link rel="stylesheet" href="/css/buttons.css">
+        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/generateurUTM.css">
+    </head>
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main>
+
+            <section class="utm-container"> <!-- GENERATEUR D'URL UTM -->
+                <h2 class="utm-title">Générateur d'URL UTM</h2>
+                
+                <label for="utm-base-url" class="utm-label">URL de base :</label>
+                <input type="text" id="utm-base-url" class="utm-input" placeholder="La source de trafic : https://www.example.com">
+                <small class="utm-info">Utiliser l'URL d'origine d'où proviendra le clic.</small>
+                
+                <label for="utm-source" class="utm-label">Source (utm_source) :</label>
+                <input type="text" id="utm-source" class="utm-input" placeholder="Le type de support...">
+                <small class="utm-info">Exemples : google, facebook, newsletter, linkedin, twitter, instagram, etc...</small>
+                
+                <label for="utm-medium" class="utm-label">Médium (utm_medium) :</label>
+                <input type="text" id="utm-medium" class="utm-input" placeholder="Le moyen utilisé...">
+                <small class="utm-info">Exemples : cpc (coût par clic), email, social, referral, organic, etc...</small>
+                
+                <label for="utm-campaign" class="utm-label">Campagne (utm_campaign) :</label>
+                <input type="text" id="utm-campaign" class="utm-input" placeholder="Un nom pour différencier les campagnes...">
+                <small class="utm-info">Exemples : promo_mars, black_friday, lancement_produit, etc...</small>
+                
+                <label for="utm-term" class="utm-label">Terme (utm_term) :</label>
+                <input type="text" id="utm-term" class="utm-input" placeholder="Mot clé spécifique souvent utilisé pour Google Ads ...">
+                <small class="utm-info">Exemples : seo, chaussures_nike, marketing_digital, etc...</small>
+                
+                <label for="utm-content" class="utm-label">Contenu (utm_content) :</label>
+                <input type="text" id="utm-content" class="utm-input" placeholder="Différencie plusieurs versions d’une même annonce...">
+                <small class="utm-info">Exemples : bouton_rouge, image_banniere, texte_lien, etc...</small>
+                
+                <button onclick="generateUTM()" class="utm-button">Générer l'URL</button>
+                <button onclick="copyURL()" class="utm-button utm-copy">Copier l'URL</button>
+                
+                <div id="utm-generated-url" class="utm-output"></div>
+            </section>
+        
+            <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+                <h2>Contact</h2>
+                <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+                <p> Ou via ce formulaire :</p>
+                <!-- Formulaire de contact -->
+                <form id="contactForm">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+            
+                    <label for="subject">Sujet :</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+            
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+    
+            <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+                &#8679; <!-- Flèche vers le haut -->
+            </div>
+    
+            <footer>  <!-- FOOTER & SOCKET -->
+                <div class="socket" class="borderSocket">
+                    <div class="socket-left">
+                        <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                    </div>
+                    <div class="socket-center">
+                        <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                    </div>
+                    <div class="socket-right">
+                        <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                    </div>
+                </div>
+            </footer>
+        
+        </main>
+        
+    </body>
+
+    <!-- FICHIERS JavaScript -->
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/headerNav.js"></script>
+    <script src="/scripts/headerNavMobile.js"></script>
+    <script src="/scripts/contact.js"></script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/generateurUTM.js"></script>
+
+</html>

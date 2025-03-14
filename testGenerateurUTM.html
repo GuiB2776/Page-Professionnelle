@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Générateur d'URL UTM </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/outilsMarketing/generateurUTM.css">
+    </head>
+
+    <body>
+        <main>
+            <section class="utm-container">
+                <h2 class="utm-title">Générateur d'URL UTM</h2>
+                
+                <label for="utm-base-url" class="utm-label">URL de base :</label>
+                <input type="text" id="utm-base-url" class="utm-input" placeholder="La source de trafic : https://www.example.com">
+                <small class="utm-info">Utiliser l'URL d'origine d'où proviendra le clic.</small>
+                
+                <label for="utm-source" class="utm-label">Source (utm_source) :</label>
+                <input type="text" id="utm-source" class="utm-input" placeholder="Le type de support...">
+                <small class="utm-info">Exemples : google, facebook, newsletter, linkedin, twitter, instagram, etc...</small>
+                
+                <label for="utm-medium" class="utm-label">Médium (utm_medium) :</label>
+                <input type="text" id="utm-medium" class="utm-input" placeholder="Le moyen utilisé...">
+                <small class="utm-info">Exemples : cpc (coût par clic), email, social, referral, organic, etc...</small>
+                
+                <label for="utm-campaign" class="utm-label">Campagne (utm_campaign) :</label>
+                <input type="text" id="utm-campaign" class="utm-input" placeholder="Un nom pour différencier les campagnes...">
+                <small class="utm-info">Exemples : promo_mars, black_friday, lancement_produit, etc...</small>
+                
+                <label for="utm-term" class="utm-label">Terme (utm_term) :</label>
+                <input type="text" id="utm-term" class="utm-input" placeholder="Mot clé spécifique souvent utilisé pour Google Ads ...">
+                <small class="utm-info">Exemples : seo, chaussures_nike, marketing_digital, etc...</small>
+                
+                <label for="utm-content" class="utm-label">Contenu (utm_content) :</label>
+                <input type="text" id="utm-content" class="utm-input" placeholder="Différencie plusieurs versions d’une même annonce...">
+                <small class="utm-info">Exemples : bouton_rouge, image_banniere, texte_lien, etc...</small>
+                
+                <button onclick="generateUTM()" class="utm-button">Générer l'URL</button>
+                <button onclick="copyURL()" class="utm-button utm-copy">Copier l'URL</button>
+                
+                <div id="utm-generated-url" class="utm-output"></div>
+            </section>
+        </main>
+        
+    </body>
+
+    <script src="scripts/outilsMarketing/generateurUTM.js"></script>
+
+</html>

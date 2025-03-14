@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         </li>
                         <li><a href="outilsDeMarketingDigital.html"> Outils </a>
                             <ul>
-                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
-                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
-                                <li><a href="simulateurSERP.html">Simulateur de SERP</a></li>
+                                <li><a href="simulateurSERP.html"> Simulateur de SERP </a></li>
+                                <li><a href="generateurUTM.html"> Générateur d'URL UTM </a></li>
+                                <li><a href="simulateurSERP.html"> Simulateur de SERP</a></li>
                             </ul>
                         </li>
                         <li><a href="qcm.html">Exemple de QCM</a>

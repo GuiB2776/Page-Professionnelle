@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Guillaume BULLET </title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Découvrez mes parcours, expériences, compétences et mes informations de contact. Consultez mon CV en ligne pour en savoir plus sur mon expertise et mes projets.">
+        <meta name="keywords" content="CV, curriculum vitae, expériences professionnelles, formations, compétences, informations de contact, profil professionnel, mon parcours, développement de carrière, marketing, marketing digital, profil en ligne">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/headerNav.css">
+        <link rel="stylesheet" href="css/headerNavMobile.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main> <!-- MAIN -->
+
+            <section>
+                <h2> Bonnes pratiques pour nommer une page HTML </h2>
+                <p>
+                    Le choix du nom d'un fichier HTML est crucial pour le référencement (SEO), la gestion de projet et l’accessibilité. Voici quelques règles et bonnes pratiques à suivre :
+                </p>
+                <div class="sous-section">
+                    <h3> Utiliser des noms clairs et explicites </h3>
+                    <p>
+                        Le nom du fichier doit être choisi de manière à refléter de façon claire et précise le contenu ou la fonction principale de la page web. 
+                        Il doit permettre aux utilisateurs, ainsi qu’aux moteurs de recherche, de comprendre immédiatement l’objectif de la page sans même avoir à l’ouvrir. 
+                        Un bon nom de fichier facilite également l'organisation du site, améliore la lisibilité des URL et contribue à un meilleur référencement naturel (SEO).
+                        <br><br>
+                        <strong> 🆗 Exemples des bonnes pratiques de nommage : </strong>
+                        <ul>
+                            <li> ✅ Page d'accueil : index.html </li>
+                            <li> ✅ Page de contact : contact.html </li>
+                            <li> ✅ A propos : a-propos.html </li>
+                            <li> ✅ Simulateur de SERP : simulateur-serp.html </li>
+                            <li> ✅ Apprendre le Marketing Digital : apprendre-le-marketing-digital.html </li>
+                        </ul>
+                        <strong> ⚠️ Mauvaises pratiques de nommage : </strong>
+                        <ul>
+                            <li> ❌ Trop générique : page1.html </li>
+                            <li> ❌ Non descriptif : test.html </li>
+                            <li> ❌ Ne signifie rien : nouveau.html </li>
+                            <li> ❌ Trop long : voici-tous-les-conseils-seo-les-plus-utiles-pour-votre-site-internet.html </li>
+                            <li> ❌ Contient des caractères spéciaux ou des majuscules : évènements_d'Août.html </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="sous-section">
+                    <h3> 1. Pourquoi utiliser des tirets - plutôt que des underscores _ </h3>
+                    <p>
+                        Google et d'autres moteurs de recherche considèrent les tirets comme des séparateurs de mots, alors qu’ils traitent les underscores comme des caractères normaux.
+                        Les tirets rendent les noms de fichiers et les URLs plus lisibles pour les humains, ce qui améliore l’expérience utilisateur.
+                        Google lui-même recommande l'utilisation des tirets dans les URLs et les fichiers pour améliorer l’indexation et l’interprétation du contenu.
+                        <br><br>
+                        <strong> Google recommande l’usage des tirets pour séparer les mots dans les URL : </strong>
+                        <ul>
+                            <li> ✅ generateur-utm.html : Correct pour le SEO </li>
+                            <li> ❌ generateur_utm.html : Moins lisible pour les moteurs de recherche </li>
+                            <li> ❌ generateurutm.html : Difficile à lire pour les moteurs de recherche et les utilisateurs </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="sous-section">
+                    <h3> 2. Pourquoi éviter les caractères spéciaux et les accents </h3>
+                    <p>
+                        Certains caractères spéciaux peuvent entraîner des erreurs ou des incompatibilités en fonction des systèmes d’exploitation, des navigateurs web et des serveurs utilisés pour héberger le site. 
+                        Certains environnements ne reconnaissent pas correctement des caractères comme les accents, les espaces ou les symboles spéciaux, ce qui peut provoquer des dysfonctionnements, des erreurs d'affichage, voire rendre le fichier inaccessible. 
+                        Pour garantir une compatibilité maximale et éviter tout problème, il est recommandé de limiter l'utilisation des caractères autorisés tels que les lettres minuscules, les chiffres et les tirets.
+                        <br><br>
+                        <strong> 🆗 Caractères autorisés : </strong>
+                        <ul>
+                            <li> ✅ Lettres (a-z) </li>
+                            <li> ✅ Chiffres (0-9) </li>
+                            <li> ✅ Tirets (-) </li>
+                            <li> ✅ Extensions en minuscules (.html) </li>
+                        </ul>
+                        <strong> ⚠️ Caractères interdits : </strong>
+                        <ul>
+                            <li> ❌ Espaces ( )  </li>
+                            <li> ❌ Accents (é, è, à, ç) </li>
+                            <li> ❌ Symboles (#, &, ?, *, %) </li>
+                            <li> ❌ underscore (_) </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="sous-section">
+                    <h3> 3. Pourquoi utiliser des noms en minuscules </h3>
+                    <p>
+                        Certains serveurs, en particulier ceux fonctionnant sous des systèmes d'exploitation basés sur Linux et Unix, sont sensibles à la casse des caractères dans les noms de fichiers. 
+                        Cela signifie qu'ils font une distinction stricte entre les majuscules et les minuscules, contrairement à d'autres environnements comme Windows, qui traite généralement les fichiers de manière insensible à la casse. 
+                        Par conséquent, un fichier nommé "Page.html" ne sera pas reconnu comme étant le même que "page.html" sur un serveur Linux, ce qui peut entraîner des erreurs d'affichage ou des liens brisés si le nom du fichier est mal référencé dans le code. 
+                        Pour éviter ces problèmes, il est recommandé d'utiliser uniquement des lettres minuscules dans les noms de fichiers et d’adopter une convention de nommage cohérente dans l’ensemble du projet.
+                        <br><br>
+                        <strong> Exemples : </strong>
+                        <ul>
+                            <li> ✅ contact.html : Meilleure compatibilité </li>
+                            <li> ❌ Contact.html : La majuscule peut poser problème sur certains serveurs  </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="sous-section">
+                    <h3> 4. Pourquoi garder un nom court mais descriptif </h3>
+                    <p>
+                        Un bon nom de fichier doit être suffisamment explicite pour que son contenu ou sa fonction soit immédiatement identifiable, même sans avoir besoin d’ouvrir le fichier. 
+                        Il doit être clair, pertinent et facile à comprendre en un simple coup d'œil, aussi bien pour les développeurs que pour les utilisateurs finaux ou les moteurs de recherche. 
+                        De plus, il ne doit pas être excessivement long afin de rester facilement lisible et manipulable, tout en évitant les risques d'erreurs lors de la saisie manuelle. 
+                        <br><br>
+                        Un nom de fichier trop long peut également compliquer la gestion des liens et rendre les URL moins esthétiques ou plus difficiles à mémoriser. 
+                        L’idéal est donc de trouver un équilibre entre concision et précision, en utilisant des mots-clés pertinents tout en limitant le nombre de caractères.
+                        <br><br>
+                        <strong> Exemples : </strong>
+                        <ul>
+                            <li> ✅ contact.html : Meilleure compatibilité </li>
+                            <li> ❌ Contact.html : La majuscule peut poser problème sur certains serveurs  </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="sous-section">
+                    <h3> 5. Pourquoi assurer la cohérence dans le projet </h3>
+                    <strong> La cohérence, un gain de temps et de qualité </strong>
+                    <ul>
+                        <li> <strong> • Organisation claire </strong> = Navigation et gestion des fichiers plus fluides. </li>
+                        <li> <strong> • Facilité de maintenance </strong> = Travail d’équipe et évolutivité améliorés. </li>
+                        <li> <strong> • Réduction des erreurs </strong> = Moins de bugs et d’incohérences dans le code. </li>
+                        <li> <strong> • Optimisation SEO </strong> = URLs propres et mieux indexées par Google. </li>
+                    </ul>
+                    <p>
+                        Assurer une cohérence dans le nommage des fichiers est essentiel pour garantir une bonne organisation, faciliter la navigation et optimiser la maintenance du projet. 
+                        Une nomenclature homogène permet d’éviter la confusion, de structurer le code de manière plus logique et d’améliorer l’efficacité du travail collaboratif.
+                        Cela évite d’avoir des fichiers aux noms disparates ou difficiles à interpréter, ce qui peut ralentir la gestion du projet.
+                        <br><br>
+                        Une nomenclature cohérente simplifie la mise à jour et la maintenance du projet, notamment lorsque plusieurs développeurs travaillent dessus. 
+                        Si les noms des fichiers sont bien définis et homogènes, cela réduit les erreurs potentielles dans les liens internes, les importations de fichiers CSS ou JS, et les appels d’API. 
+                        Un mauvais nommage peut causer des erreurs 404 (fichiers introuvables) ou des incohérences dans le code.
+                        <br><br>
+                        Une structure cohérente des fichiers améliore également le référencement naturel (SEO). 
+                        Un site bien organisé avec une nomenclature propre est plus facilement indexé par Google. 
+                        De plus, des noms de fichiers bien pensés améliorent l’expérience utilisateur et rendent les liens plus lisibles et compréhensibles.
+                        <br><br>
+                        <strong> 🆗 Bonnes Pratiques : </strong>
+                        <ul>
+                            <li> ✅ produit-liste.html : Liste des produits </li>
+                            <li> ✅ produit-details.html : Détails d'un produit </li>
+                        </ul>
+                        <strong> ⚠️ Mauvaise Pratique : </strong>
+                        <ul>
+                            <li> ❌ produit-liste.html & detail_produit.html : Format différent  </li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+            <p> Ou via ce formulaire :</p>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+
+        <footer>  <!-- FOOTER & SOCKET -->
+
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    
+    <!-- FICHIERS JavaScript -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/headerNav.js"></script>
+    <script src="scripts/headerNavMobile.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/footer.js"></script>
+
+</html>

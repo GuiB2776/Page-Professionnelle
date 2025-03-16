@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Projet - Kanban</title>
+    <meta name="description" content="Outil de gestion de projet inspiré de Trello pour organiser vos tâches efficacement.">
+    <meta name="keywords" content="gestion de projet, kanban, organisation, tâches, Trello, planification">
+</head>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0077b6;
+        }
+
+        .kanban-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .list {
+            background: white;
+            padding: 15px;
+            width: 300px;
+            min-height: 400px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+        }
+
+        .cards-container {
+            flex-grow: 1;
+            padding: 10px;
+            background: #f4f4f9;
+            border-radius: 5px;
+            min-height: 300px;
+        }
+
+        .card {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: grab;
+        }
+
+        .card.dragging {
+            opacity: 0.5;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #005f8a;
+        }
+
+        @media (max-width: 768px) {
+            .kanban-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+
+<body>
+
+    <header>
+        <h1>📌 Gestion de Projet - Kanban</h1>
+    </header>
+
+    <main>
+        <div class="kanban-container">
+            <div class="list" id="todo">
+                <h2>📝 À Faire</h2>
+                <div class="cards-container" id="todo-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('todo-cards')">➕ Ajouter une tâche</button>
+            </div>
+
+            <div class="list" id="in-progress">
+                <h2>⏳ En Cours</h2>
+                <div class="cards-container" id="in-progress-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('in-progress-cards')">➕ Ajouter une tâche</button>
+            </div>
+
+            <div class="list" id="done">
+                <h2>✅ Terminé</h2>
+                <div class="cards-container" id="done-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('done-cards')">➕ Ajouter une tâche</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", loadBoard);
+        // Fonction pour ajouter une carte
+        function addCard(listId) {
+            let cardText = prompt("Entrez la tâche :");
+            if (cardText) {
+                let card = document.createElement("div");
+                card.className = "card";
+                card.textContent = cardText;
+                card.setAttribute("draggable", "true");
+                card.addEventListener("dragstart", dragStart);
+                card.addEventListener("dblclick", () => removeCard(card));
+                
+                document.getElementById(listId).appendChild(card);
+                saveBoard();
+            }
+        }
+        // Fonction pour supprimer une carte
+        function removeCard(card) {
+            if (confirm("Voulez-vous supprimer cette tâche ?")) {
+                card.remove();
+                saveBoard();
+            }
+        }
+        // Permettre le glisser-déposer
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        function dragStart(event) {
+            event.dataTransfer.setData("text", event.target.outerHTML);
+            setTimeout(() => event.target.classList.add("dragging"), 0);
+        }
+        function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            event.target.innerHTML += data;
+            let card = event.target.lastElementChild;
+            card.classList.remove("dragging");
+            card.addEventListener("dragstart", dragStart);
+            card.addEventListener("dblclick", () => removeCard(card));
+            saveBoard();
+        }
+        // Sauvegarde dans LocalStorage
+        function saveBoard() {
+            let board = {
+                todo: document.getElementById("todo-cards").innerHTML,
+                inProgress: document.getElementById("in-progress-cards").innerHTML,
+                done: document.getElementById("done-cards").innerHTML
+            };
+            localStorage.setItem("kanbanBoard", JSON.stringify(board));
+        }
+        // Chargement des données
+        function loadBoard() {
+            let savedBoard = JSON.parse(localStorage.getItem("kanbanBoard"));
+            if (savedBoard) {
+                document.getElementById("todo-cards").innerHTML = savedBoard.todo;
+                document.getElementById("in-progress-cards").innerHTML = savedBoard.inProgress;
+                document.getElementById("done-cards").innerHTML = savedBoard.done;
+
+                // Réattribuer les événements aux cartes chargées
+                document.querySelectorAll(".card").forEach(card => {
+                    card.setAttribute("draggable", "true");
+                    card.addEventListener("dragstart", dragStart);
+                    card.addEventListener("dblclick", () => removeCard(card));
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         </li>
                         <li><a href="#"> Bonnes Pratiques & Conseils </a>
                             <ul>
-                                <li><a href="nommer-ses-pages-html.html"> Nommer ses pages </a></li>
+                                <li><a href="nommer-ses-pages-html.html"> - Nommer ses pages </a></li>
+                                <li><a href="optimisation-on-page.html"> - L'Optimisation On-Page </a></li>
                             </ul>
                         </li>
                         <li><a href="se-former-au-marketing-digital.html"> Apprendre le Marketing Digital </a>
@@ -60,9 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         </li>
                         <li><a href="outils-de-marketing-digital.html"> Outils Marketing</a>
                             <ul>
-                                <li><a href="simulateur-SERP.html"> Simulateur de SERP </a></li>
-                                <li><a href="generateur-utm.html"> Générateur d'URL UTM </a></li>
+                                <li><a href="analyseur-de-texte-seo.html"> Analyseur de Score de Lisibilité </a></li>
                                 <li><a href="exemple-de-qcm-personnalise.html">Exemple de QCM personnalisé </a></li>
+                                <li><a href="generateur-utm.html"> Générateur d'URL UTM </a></li>
+                                <li><a href="simulateur-SERP.html"> Simulateur de SERP </a></li>
                             </ul>
                         </li>
                     </ul>

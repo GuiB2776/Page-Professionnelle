@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Guillaume BULLET </title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Découvrez mes parcours, expériences, compétences et mes informations de contact. Consultez mon CV en ligne pour en savoir plus sur mon expertise et mes projets.">
+        <meta name="keywords" content="CV, curriculum vitae, expériences professionnelles, formations, compétences, informations de contact, profil professionnel, mon parcours, développement de carrière, marketing, marketing digital, profil en ligne">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/headerNav.css">
+        <link rel="stylesheet" href="css/headerNavMobile.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+
+    <style>
+        #seo-readability {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        #text-input {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin: -10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .stats p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        #readability-advice {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #readability-advice li {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        /* TABLEAU D'INTERPRETATION DU SCORE DE LISIBILITE */
+        .readability-table {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .readability-table h4 {
+            text-align: center;
+            color: #0077b6; /* Bleu principal */
+            margin-bottom: 15px;
+        }
+
+        table .readability-table-component{
+            width:auto ;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        thead .readability-table-component{
+            background-color: #0077b6; /* Bleu principal */
+            color: white;
+        }
+
+        th, td .readability-table-component{
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) .readability-table-component{
+            background-color: #f4f4f9;
+        }
+
+        tbody tr:hover .readability-table-component{
+            background-color: #e0f7fa; /* Légère surbrillance au survol */
+        }
+
+    </style>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main> <!-- MAIN -->
+
+            <section id="seo-readability"> <!-- ANALYSEUR DE SCORE FRE & FKGL -->
+                <h2>Analyse du Score de Lisibilité</h2>
+                <textarea id="text-input" placeholder="Saisissez votre texte ici..."></textarea>
+                <h3> Données : </h3>
+                <div class="stats">
+                    <p><strong>Nombre de caractères :</strong> <span id="char-count">0</span></p>
+                    <p><strong>Nombre de mots :</strong> <span id="word-count">0</span></p>
+                    <p><strong>Nombre de phrases :</strong> <span id="sentence-count">0</span></p>
+                    <p><strong>Nombre de syllabes :</strong> <span id="syllable-count">0</span></p>
+                    <p><strong>Score de Lisibilité (FRE) :</strong> <span id="flesch-score">0</span></p>
+                    <p><strong>Niveau requis (FKGL) :</strong> <span id="grade-level">0</span></p>
+                </div>
+                <div class="sous-section">
+                    <h3>🔎 Conseils d'amélioration :</h3>
+                    <ul id="readability-advice"></ul>
+                </div>
+            </section>
+
+            <section> <!-- Score de lisibilité Flesch-Kincaid -->
+                <h2> Qu'est-ce que le Score de lisibilité Flesch-Kincaid ? </h2>
+                <p>
+                    Le Score de lisibilité Flesch-Kincaid est une formule mathématique utilisée pour mesurer la facilité de lecture d'un texte. 
+                    Il est largement utilisé en SEO, rédaction web et éducation pour s'assurer qu'un contenu est compréhensible par un public cible.
+                    <br><br>
+                    Il existe deux indices principaux liés à cette formule :
+                    <ol>
+                        <li>Flesch Reading Ease (FRE) - Score de lisibilité général.</li>
+                        <li>Flesch-Kincaid Grade Level (FKGL) - Niveau scolaire nécessaire pour comprendre le texte.</li>
+                    </ol>
+                </p>
+                <div class="sous-section"> <!-- Flesch Reading Ease (FRE) -->
+                    <h3> 1. Formule du Score de Lisibilité Flesch-Kincaid (FRE) </h3>
+                    Le Flesch Reading Ease est calculé avec la formule suivante :
+                    <br><br>
+                    <strong>Score=</strong>206.835-(1.015*nombre de mots/nombre de phrases)-(84.6*nombre de syllabes/nombre de mots) 
+
+                    <h4 class="readability-table">Interprétation du Score de Lisibilité Flesch-Kincaid</h4>
+                    <table class="readability-table-component">
+                        <thead class="readability-table-component">
+                            <tr class="readability-table-component">
+                                <th class="readability-table-component">Score</th>
+                                <th class="readability-table-component">Facilité de lecture</th>
+                                <th class="readability-table-component">Niveau requis</th>
+                            </tr>
+                        </thead>
+                        <tbody class="readability-table-component">
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">90 - 100</td>
+                                <td class="readability-table-component">Très facile à lire</td>
+                                <td class="readability-table-component">Élève de 8-10 ans</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">80 - 90</td>
+                                <td class="readability-table-component">Facile à lire</td>
+                                <td class="readability-table-component">Collège</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">60 - 80</td>
+                                <td class="readability-table-component">Moyen</td>
+                                <td class="readability-table-component">Lycée</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">40 - 60</td>
+                                <td class="readability-table-component">Difficile</td>
+                                <td class="readability-table-component">Études supérieures</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">0 - 30</td>
+                                <td class="readability-table-component">Très difficile</td>
+                                <td class="readability-table-component">Niveau universitaire avancé</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sous-section"> <!-- Flesch-Kincaid Grade Level (FKGL) -->
+                    <h3> 2. Formule du Score Flesch-Kincaid Grade Level (FKGL) </h3>
+                    Le Flesch-Kincaid Grade Level évalue le niveau scolaire nécessaire pour comprendre le texte :
+                    <br><br>
+                    <strong>Score=</strong>(0.39*nombre de mots/nombre de phrases)+(11.8*nombre de syllabes/nombre de mots)-15.59
+
+                    <h4 class="readability-table">Interprétation du Score Flesch-Kincaid Grade Level</h4>
+                    <table class="readability-table-component">
+                        <thead class="readability-table-component">
+                            <tr class="readability-table-component">
+                                <th class="readability-table-component">Score FKGL</th>
+                                <th class="readability-table-component">Niveau éducatif nécessaire</th>
+                            </tr>
+                        </thead>
+                        <tbody class="readability-table-component">
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">1-5</td>
+                                <td class="readability-table-component">École primaire</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">6-8</td>
+                                <td class="readability-table-component">Collège</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">9-12</td>
+                                <td class="readability-table-component">Lycée</td>
+                            </tr>
+                            <tr class="readability-table-component">
+                                <td class="readability-table-component">13+</td>
+                                <td class="readability-table-component">Études supérieures</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+            </section>
+
+            <section> <!-- Application en SEO et Rédaction Web -->
+                <h2> Application en SEO et Rédaction Web </h2>
+                <p>
+                    Le Score de lisibilité Flesch-Kincaid est un outil puissant pour optimiser le SEO et la rédaction web. 
+                    Il permet d'évaluer la facilité de lecture d'un texte et d'adapter son contenu pour maximiser l'engagement des lecteurs et le référencement naturel.
+                </p>
+                <h3> 1. Un contenu lisible améliore l'expérience utilisateur (UX) </h3>
+                <p>
+                    Google valorise les sites offrant une expérience utilisateur optimale.
+                    Un texte clair et fluide réduit le taux de rebond.
+                    Les visiteurs restent plus longtemps sur la page, ce qui améliore le temps de session.
+                    Les CTA (appels à l'action) sont mieux compris, augmentant les conversions.
+                </p>
+                <h3> 2. Un meilleur classement dans les résultats de recherche </h3>
+                <p>
+                    Les algorithmes de Google, Bing et autres moteurs de recherche prennent en compte la lisibilité pour le référencement naturel (SEO).
+                    Un texte complexe peut être pénalisé, car il est jugé moins accessible.
+                    Un texte clair et bien structuré est mieux compris et mieux classé.
+                    Google privilégie les réponses directes et faciles à comprendre, notamment pour la recherche vocale.
+                </p>
+                <h3> 3. Amélioration du taux de conversion </h3>
+                <p>
+                    Un contenu bien rédigé convertit plus de visiteurs en clients.
+                    Un texte trop complexe décourage les lecteurs.
+                    Une lecture fluide améliore l'engagement et la confiance.
+                    Un bon équilibre entre simplicité et précision est crucial pour un bon marketing de contenu.
+                </p>                       
+            </section>
+
+        </main>
+
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+            <p> Ou via ce formulaire :</p>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+
+        <footer>  <!-- FOOTER & SOCKET -->
+
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <script>
+        document.getElementById("text-input").addEventListener("input", analyzeText);
+
+        function analyzeText() {
+            let text = document.getElementById("text-input").value;
+            let wordCount = countWords(text);
+            let sentenceCount = countSentences(text);
+            let syllableCount = countSyllables(text);
+            let fleschScore = calculateFleschReadingEase(wordCount, sentenceCount, syllableCount);
+            let gradeLevel = calculateFleschKincaidGradeLevel(wordCount, sentenceCount, syllableCount);
+
+            // Mise à jour des valeurs affichées
+            document.getElementById("char-count").textContent = text.length;
+            document.getElementById("word-count").textContent = wordCount;
+            document.getElementById("sentence-count").textContent = sentenceCount;
+            document.getElementById("syllable-count").textContent = syllableCount;
+            document.getElementById("flesch-score").textContent = fleschScore.toFixed(2);
+            document.getElementById("grade-level").textContent = gradeLevel.toFixed(2);
+
+            generateReadabilityAdvice(wordCount, sentenceCount, syllableCount, fleschScore, gradeLevel);
+        }
+
+        // Compte le nombre de mots
+        function countWords(text) {
+            let words = text.match(/\b\w+\b/g);
+            return words ? words.length : 0;
+        }
+
+        // Compte le nombre de phrases
+        function countSentences(text) {
+            let sentences = text.split(/[.!?]+/);
+            return sentences.filter(s => s.trim().length > 0).length;
+        }
+
+        // Compte le nombre de syllabes (approximation basée sur les voyelles)
+        function countSyllables(text) {
+            let words = text.match(/\b\w+\b/g);
+            if (!words) return 0;
+
+            let syllableCount = 0;
+
+            words.forEach(word => {
+                // Retirer les lettres muettes à la fin (ex: "parle", "mange", "aime")
+                word = word.toLowerCase().replace(/(?:es|ed|e)$/, '');
+
+                // Compter les séquences de voyelles comme syllabes
+                let matches = word.match(/[aeiouyàâäéèêëîïôöùûü]+/g);
+                let count = matches ? matches.length : 0;
+
+                // Gérer les mots courts qui contiennent une seule voyelle mais sont longs
+                if (count === 0) count = 1; // Ex: "peu", "haut"
+
+                // Ajout de corrections spécifiques au français
+                if (word.length <= 3) count = 1; // Ex: "un", "le", "tu"
+
+                syllableCount += count;
+            });
+
+            return syllableCount;
+        }
+
+        // Calcul du Score de Lisibilité Flesch (FRE)
+        function calculateFleschReadingEase(words, sentences, syllables) {
+            if (words === 0 || sentences === 0) return 0;
+            return 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words));
+        }
+
+        // Calcul du niveau scolaire requis (FKGL)
+        function calculateFleschKincaidGradeLevel(words, sentences, syllables) {
+            if (words === 0 || sentences === 0) return 0;
+            return (0.39 * (words / sentences)) + (11.8 * (syllables / words)) - 15.59;
+        }
+
+        // Génère les conseils d'amélioration
+        function generateReadabilityAdvice(words, sentences, syllables, fleschScore, gradeLevel) {
+            let adviceList = document.getElementById("readability-advice");
+            adviceList.innerHTML = ""; // Réinitialisation des conseils
+
+            if (words < 50) {
+                addAdvice("• ❌ Votre texte est trop court. Ajoutez plus de contenu pertinent.");
+            }
+            if (words > 800) {
+                addAdvice("• ⚠️ Votre texte est trop long. Retirez du contenu moins pertinent.");
+            }
+            if (fleschScore < 50) {
+                addAdvice("• ❌ Le texte est difficile à lire. Simplifiez les phrases et utilisez des mots plus courts.");
+            }
+            if (sentences > 0 && (words / sentences) > 20) {
+                addAdvice("• ⚠️ Vos phrases sont trop longues. Essayez de les raccourcir pour améliorer la lisibilité.");
+            }
+            if ((syllables / words) > 1.5) {
+                addAdvice("• ⚠️ Vous utilisez trop de mots complexes. Remplacez-les par des termes plus simples.");
+            }
+            if (fleschScore > 90) {
+                addAdvice("• ⚠️ Le texte est peut-être trop simple. Ajoutez des détails ou des termes plus précis. (FRE)");
+            }
+            if (gradeLevel > 12) {
+                addAdvice("• ❌ Le niveau de lecture est trop avancé. Simplifiez vos explications. (FKGL)");
+            }
+            if (gradeLevel < 5) {
+                addAdvice("• ⚠️ Le texte est très basique. Ajoutez des informations plus détaillées. (FKGL)");
+            }
+        }
+
+        // Ajoute un conseil à la liste
+        function addAdvice(text) {
+            let li = document.createElement("li");
+            li.textContent = text;
+            document.getElementById("readability-advice").appendChild(li);
+        }
+
+    </script>
+
+    
+    <!-- FICHIERS JavaScript -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/headerNav.js"></script>
+    <script src="scripts/headerNavMobile.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/footer.js"></script>
+
+</html>

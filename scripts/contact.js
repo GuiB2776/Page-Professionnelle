@@ -56,3 +56,4 @@ document.getElementById("contactForm").addEventListener("submit", async function
             console.error("Erreur EmailJS :", error);
         });
 });
+

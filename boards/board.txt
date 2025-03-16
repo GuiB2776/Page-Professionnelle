@@ -52,3 +52,60 @@ Page 8 : Tendances et Innovations en Marketing Digital
     La recherche vocale et l’optimisation pour la recherche
     Le marketing vidéo et la réalité augmentée
     L'avenir du marketing digital
+
+
+    ---------------------------------------------------------
+
+
+SEO :
+
+1. Titre : Optimisation On-Page (SEO sur la page)
+✅ Rédiger des titres optimisés (<title>) : Inclure des mots-clés stratégiques tout en restant naturel.
+✅ Rédiger des méta-descriptions attractives : Résumer le contenu en 150-160 caractères avec un CTA engageant.
+✅ Utiliser des balises <h1>, <h2>, <h3> correctement : Structurer le contenu avec une hiérarchie logique.
+✅ Optimiser le maillage interne : Relier les pages entre elles pour améliorer l’expérience utilisateur et le crawl de Google.
+✅ Créer des URL propres et lisibles :
+👍 www.exemple.com/guide-seo-debutant
+❌ www.exemple.com/?p=12345
+
+2. Contenu et Stratégie éditoriale
+✅ Produire un contenu de qualité : Longueur optimale 800+ mots, bien structuré et engageant.
+✅ Cibler les bons mots-clés : Utiliser Google Keyword Planner, Ubersuggest, ou SEMrush pour trouver des termes pertinents.
+✅ Rédiger un contenu unique et original : Éviter le duplicate content pour ne pas être pénalisé par Google.
+✅ Optimiser pour la recherche vocale : Utiliser des phrases naturelles et des questions (Comment faire... ?).
+✅ Mettre à jour régulièrement son contenu : Un article mis à jour est mieux positionné.
+
+3. Expérience utilisateur et UX (SEO technique)
+✅ Optimiser la vitesse de chargement : Tester avec Google PageSpeed Insights et compresser les images.
+✅ Assurer une compatibilité mobile (Mobile-First) : Google privilégie les sites responsive.
+✅ Améliorer le temps de rétention : Ajouter des vidéos, des images et des CTA pour engager les visiteurs.
+✅ Utiliser des données structurées (Schema.org) : Améliorer l'affichage des résultats avec des Rich Snippets.
+✅ Éviter les erreurs 404 et redirections inutiles : Vérifier avec Google Search Console.
+
+4. Netlinking et Popularité
+✅ Obtenir des backlinks de qualité : Privilégier les liens provenant de sites d’autorité.
+✅ Éviter les liens toxiques : Supprimer les backlinks nuisibles via Google Disavow Tool.
+✅ Créer du contenu viral : Infographies, études de cas, articles de fond pour générer des partages.
+✅ Être actif sur les réseaux sociaux : Booster la visibilité et le trafic vers le site.
+
+5. Analyse et Suivi des Performances
+✅ Suivre les positions des mots-clés : Avec Google Search Console, Ahrefs ou SEMrush.
+✅ Analyser le trafic avec Google Analytics : Identifier les pages les plus performantes et celles à améliorer.
+✅ Faire des A/B Testing : Tester différents titres, descriptions, CTA pour optimiser le taux de conversion.
+
+6. SEO Local
+✅ Optimiser Google My Business : Ajouter des photos, des avis, des horaires d’ouverture.
+✅ Utiliser des mots-clés locaux : "Plombier Paris 15" au lieu de "Plombier" seul.
+✅ Obtenir des avis clients : Encourager les avis positifs pour améliorer le classement local.
+
+7. SEO Technique Avancé
+✅ Améliorer le crawl et l’indexation : Vérifier avec Google Search Console et le fichier robots.txt.
+✅ Utiliser un sitemap.xml : Aider les moteurs de recherche à explorer le site.
+✅ Corriger les erreurs HTTP : Vérifier les erreurs 404, 500 et les redirections 301.
+✅ Passer en HTTPS : Google favorise les sites sécurisés.
+
+-----------------------------
+
+- Faire une automatisation de l'affichage de la section "Contact" sur toutes les pages en utilisant du JavaScript
+- Améliorer la page : optimisation-on-page.html
+- Améliorer l'outil de gestion de projet : outil-de-gestion-de-projet.html

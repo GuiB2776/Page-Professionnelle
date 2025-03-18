@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Projet - Kanban JSON</title>
+    <meta name="description" content="Outil de gestion de projet inspiré de Trello avec sauvegarde JSON.">
+    <meta name="keywords" content="gestion de projet, kanban, JSON, tâches, Trello, planification">
+    
+    <!-- Fichier CSS -->
+    <link rel="stylesheet" href="css/kanban.css">
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        text-align: center;
+    }
+
+    h1 {
+        color: #0077b6;
+    }
+
+    .kanban-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .list {
+        background: white;
+        padding: 15px;
+        width: 300px;
+        min-height: 400px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+        color: #0077b6;
+    }
+
+    .cards-container {
+        flex-grow: 1;
+        padding: 10px;
+        background: #f4f4f9;
+        border-radius: 5px;
+        min-height: 300px;
+    }
+
+    .card {
+        background: white;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: grab;
+    }
+
+    .card.dragging {
+        opacity: 0.5;
+    }
+
+    button {
+        background-color: #0077b6;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #005f8a;
+    }
+
+    @media (max-width: 768px) {
+        .kanban-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+</style>
+
+
+<body>
+
+    <header>
+        <h1>📌 Gestion de Projet - Kanban</h1>
+    </header>
+
+    <main>
+        <div class="kanban-container">
+            <div class="list" id="todo">
+                <h2>📝 À Faire</h2>
+                <div class="cards-container" id="todo-cards" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('todo')">➕ Ajouter une tâche</button>
+            </div>
+
+            <div class="list" id="in-progress">
+                <h2>⏳ En Cours</h2>
+                <div class="cards-container" id="in-progress-cards" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('in-progress')">➕ Ajouter une tâche</button>
+            </div>
+
+            <div class="list" id="done">
+                <h2>✅ Terminé</h2>
+                <div class="cards-container" id="done-cards" ondrop="drop(event, 'done')" ondragover="allowDrop(event)"></div>
+                <button onclick="addCard('done')">➕ Ajouter une tâche</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", loadBoard);
+
+        // Fonction pour charger les tâches depuis le JSON
+        async function loadBoard() {
+            try {
+                let response = await fetch("/Outil-De-Gestion-De-Projet/OutilDeGestionDeProjet.json");
+                let data = await response.json();
+                
+                ["todo", "in-progress", "done"].forEach(list => {
+                    document.getElementById(`${list}-cards`).innerHTML = "";
+                    data[list].forEach(task => createCard(task.text, list));
+                });
+            } catch (error) {
+                console.error("Erreur lors du chargement des tâches :", error);
+            }
+        }
+
+        // Ajouter une carte
+        function addCard(listId) {
+            let cardText = prompt("Entrez la tâche :");
+            if (cardText) {
+                createCard(cardText, listId);
+                saveBoard();
+            }
+        }
+
+        // Créer une carte
+        function createCard(text, listId) {
+            let card = document.createElement("div");
+            card.className = "card";
+            card.textContent = text;
+            card.setAttribute("draggable", "true");
+            card.addEventListener("dragstart", dragStart);
+            card.addEventListener("dblclick", () => removeCard(card, listId));
+            
+            document.getElementById(`${listId}-cards`).appendChild(card);
+        }
+
+        // Supprimer une carte
+        function removeCard(card, listId) {
+            if (confirm("Voulez-vous supprimer cette tâche ?")) {
+                card.remove();
+                saveBoard();
+            }
+        }
+
+        // Sauvegarde les tâches dans le fichier JSON
+        async function saveBoard() {
+            let board = {
+                todo: [...document.getElementById("todo-cards").children].map(card => ({ text: card.textContent })),
+                "in-progress": [...document.getElementById("in-progress-cards").children].map(card => ({ text: card.textContent })),
+                done: [...document.getElementById("done-cards").children].map(card => ({ text: card.textContent }))
+            };
+
+            try {
+                await fetch("/Outil-De-Gestion-De-Projet/OutilDeGestionDeProjet.php", 
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(board)
+                });
+            } catch (error) {
+                console.error("Erreur lors de la sauvegarde :", error);
+            }
+        }
+
+        // Drag & Drop
+        function allowDrop(event) { event.preventDefault(); }
+        function dragStart(event) { event.dataTransfer.setData("text", event.target.outerHTML); }
+        function drop(event, listId) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            let card = document.createElement("div");
+            card.outerHTML = data;
+            document.getElementById(`${listId}-cards`).appendChild(card);
+            saveBoard();
+        }
+
+    </script>
+
+</body>
+</html>
+
+

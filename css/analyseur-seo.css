@@ -50,10 +50,11 @@
     margin-bottom: 15px;
 }
 
-table .readability-table-component{
-    width:auto ;
+.readability-table-component{
     border-collapse: collapse;
     margin-top: 10px;
+    place-self: center;
+    text-align: center;
 }
 
 thead .readability-table-component{
@@ -64,6 +65,7 @@ thead .readability-table-component{
 th, td .readability-table-component{
     padding: 12px;
     border: 1px solid #ddd;
+    width: 33%;
 }
 
 tbody tr:nth-child(even) .readability-table-component{

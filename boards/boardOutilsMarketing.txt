@@ -63,6 +63,7 @@ Suggestions d'optimisation.
 9. Générateur de Meta Tags & Favicon Checker
 🔹 Vérifie si toutes les balises META essentielles sont bien en place et génère une favicon optimisée.
 ✅ Fonctionnalités :
+
 Analyse des balises <title>, <meta description>, <meta keywords>, Open Graph.
 Détection de la favicon et de ses versions mobiles.
 

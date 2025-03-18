@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vérificateur de Vitesse de Chargement</title>
+        <meta name="description" content="Testez la vitesse de chargement d'une page avec Lighthouse et obtenez des suggestions d'optimisation.">
+        <meta name="keywords" content="SEO, vitesse de chargement, Lighthouse, performance web, optimisation site">
+        <meta name="keywords" content="mots-clés, etc...">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/headerNav.css">
+        <link rel="stylesheet" href="css/headerNavMobile.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0077b6;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f8a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f4f4f9;
+        }
+
+        #optimization-tips {
+            text-align: left;
+            padding: 10px;
+            list-style: none;
+        }
+
+        #optimization-tips li {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+    </style>
+
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main> <!-- MAIN -->
+
+            <section id="speed-checker">
+                <h2>Analyse de Performance</h2>
+                <label for="url-input">Entrez l'URL :</label>
+                <input type="text" id="url-input" placeholder="https://www.exemple.com">
+                <button onclick="analyzePage()">Analyser</button>
+            </section>
+    
+            <section id="results">
+                <h2>Résultats</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Métrique</th>
+                            <th>Valeur</th>
+                            <th>Évaluation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>⏳ Time to First Byte (TTFB)</td>
+                            <td id="ttfb">-</td>
+                            <td id="ttfb-eval">-</td>
+                        </tr>
+                        <tr>
+                            <td>📸 Largest Contentful Paint (LCP)</td>
+                            <td id="lcp">-</td>
+                            <td id="lcp-eval">-</td>
+                        </tr>
+                        <tr>
+                            <td>📏 Cumulative Layout Shift (CLS)</td>
+                            <td id="cls">-</td>
+                            <td id="cls-eval">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <section id="suggestions">
+                <h2>Suggestions d'Optimisation</h2>
+                <ul id="optimization-tips"></ul>
+            </section>
+
+        </main>
+
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+            <p> Ou via ce formulaire :</p>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
+        </div>
+
+        <footer>  <!-- FOOTER & SOCKET -->
+
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+    <script>
+
+        async function analyzePage() {
+            let url = document.getElementById("url-input").value;
+            
+            if (!url) {
+                alert("Veuillez entrer une URL valide.");
+                return;
+            }
+        
+            try {
+                // Appel à l'API Lighthouse via PageSpeed Insights (Remplacez par votre clé API)
+                let response = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&category=performance`);
+                let data = await response.json();
+        
+                let audits = data.lighthouseResult.audits;
+                
+                // Récupération des valeurs des métriques
+                let ttfb = audits["server-response-time"].numericValue; // en ms
+                let lcp = audits["largest-contentful-paint"].numericValue / 1000; // en secondes
+                let cls = audits["cumulative-layout-shift"].numericValue;
+        
+                document.getElementById("ttfb").textContent = `${ttfb.toFixed(2)} ms`;
+                document.getElementById("lcp").textContent = `${lcp.toFixed(2)} s`;
+                document.getElementById("cls").textContent = cls.toFixed(2);
+        
+                evaluateMetric("ttfb", ttfb, 200, 500);
+                evaluateMetric("lcp", lcp, 2.5, 4.0);
+                evaluateMetric("cls", cls, 0.1, 0.25);
+        
+                generateOptimizationTips(ttfb, lcp, cls);
+            } catch (error) {
+                console.error("Erreur lors de l'analyse :", error);
+                alert("Impossible d'obtenir les performances de cette URL.");
+            }
+        }
+        
+        // Fonction pour évaluer les performances
+        function evaluateMetric(metric, value, goodThreshold, warningThreshold) {
+            let evalElem = document.getElementById(`${metric}-eval`);
+            
+            if (value <= goodThreshold) {
+                evalElem.textContent = "✅ Bon";
+                evalElem.style.color = "green";
+            } else if (value <= warningThreshold) {
+                evalElem.textContent = "⚠️ Moyen";
+                evalElem.style.color = "orange";
+            } else {
+                evalElem.textContent = "❌ Mauvais";
+                evalElem.style.color = "red";
+            }
+        }
+        
+        // Générer des suggestions d'optimisation
+        function generateOptimizationTips(ttfb, lcp, cls) {
+            let tipsList = document.getElementById("optimization-tips");
+            tipsList.innerHTML = "";
+        
+            if (ttfb > 500) addTip("🌐 Améliorez la vitesse du serveur et utilisez un CDN.");
+            if (lcp > 4.0) addTip("📸 Optimisez vos images et activez le lazy-loading.");
+            if (cls > 0.25) addTip("📏 Fixez les dimensions des images et des iframes pour éviter les décalages.");
+        }
+        
+        // Ajouter une suggestion à la liste
+        function addTip(text) {
+            let li = document.createElement("li");
+            li.textContent = text;
+            document.getElementById("optimization-tips").appendChild(li);
+        }        
+    </script>
+
+    
+    <!-- FICHIERS JavaScript -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/headerNav.js"></script>
+    <script src="scripts/headerNavMobile.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/footer.js"></script>
+
+</html>

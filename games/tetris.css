@@ -1,0 +1,99 @@
+    /* Style global */
+    body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 900px;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      /* Menu principal */
+      #menu-tetris {
+        display: flex;
+        justify-content: space-between;
+        background: #000;
+        border: 2px solid #FFD700;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      #menu-tetris .left, #menu .right {
+        flex: 1;
+      }
+      #menu-tetris .left {
+        margin-right: 20px;
+      }
+      #menu-tetris h2 {
+        margin: 0 0 10px;
+        color: #FFD700;
+      }
+      #menu-tetris input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 4px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      #menu-tetris button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 4px;
+        background: #FFD700;
+        color: #000;
+        cursor: pointer;
+      }
+      /* Leaderboard */
+      #leaderboard table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      #leaderboard th, #leaderboard td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #FFD700;
+      }
+      #leaderboard th {
+        color: #FFD700;
+      }
+      /* Zone de jeu */
+      #game {
+        display: none;
+        background: #000;
+        border: 2px solid #FFD700;
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .game-area {
+        float: left;
+      }
+      .side-panel {
+        float: right;
+        width: 200px;
+        text-align: center;
+      }
+      canvas {
+        background: #000;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid #FFD700;
+        border-radius: 4px;
+      }
+      #score {
+        margin-top: 20px;
+        font-size: 1.2em;
+      }
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }

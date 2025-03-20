@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tetris - Exemple du Jeu</title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Faire une description de la page entre 140 et 160 caractères.">
+        <meta name="keywords" content="mots-clés, etc...">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/headerNav.css">
+        <link rel="stylesheet" href="../css/headerNavMobile.css">
+        <link rel="stylesheet" href="../css/buttons.css">
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="/games/tetris.css">
+    </head>
+
+    <body>
+
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title">Guillaume BULLET</h1>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Écran d'accueil / Menu principal -->
+                <div id="menu-tetris">
+                    <div class="left">
+                        <h2>Meilleurs Scores</h2>
+                        <div id="leaderboard">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Joueur</th>
+                                <th>Score</th>
+                            </tr>
+                            </thead>
+                            <tbody id="scoresTable">
+                            <!-- Les scores seront insérés ici -->
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h2>Exemple de Tetris</h2>
+                        <p>Entrez votre pseudo :</p>
+                        <input type="text" id="pseudo" placeholder="Votre pseudo">
+                        <button id="startBtn">Démarrer la partie</button>
+                    </div>
+                </div>
+                <!-- Écran de jeu -->
+                <div id="game" class="clearfix">
+                    <!-- Zone de jeu principale -->
+                    <div class="game-area">
+                        <!-- Le canvas de jeu est configuré pour 10 colonnes x 20 lignes avec chaque bloc de 40px -->
+                        <canvas id="tetris" width="400" height="800"></canvas>
+                    </div>
+                    <!-- Panneau latéral pour prévisualisation et score -->
+                    <div class="side-panel">
+                        <h2>Prochaine pièce</h2>
+                        <!-- Canvas pour la prévisualisation : dimensionné pour accueillir une pièce (4x4 cases) -->
+                        <canvas id="next" width="160" height="160"></canvas>
+                        <div id="score">Score : 0</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
+
+    <!-- FICHIERS JavaScript -->
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/headerNav.js"></script>
+    <script src="../scripts/headerNavMobile.js"></script>
+    <script src="../scripts/contact.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="/games/tetris.js"></script>
+
+</html>

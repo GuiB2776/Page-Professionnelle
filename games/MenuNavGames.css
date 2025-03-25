@@ -1,0 +1,59 @@
+/* Menu burger dédié aux jeux */
+#games-burger-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 3000; /* Assure qu'il soit visible par-dessus */
+    background: #000;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 4px;
+  }
+  
+  /* Icône burger */
+  #games-burger-menu .burger-icon {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  #games-burger-menu .burger-icon span {
+    display: block;
+    height: 4px;
+    background: #fff;
+    margin: 4px 0;
+    transition: background 0.3s ease;
+  }
+  
+  /* Liste des liens générée */
+  #games-burger-menu .menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: none; /* Masqué par défaut */
+    background: #000;
+    border: 2px solid #FFD700;
+    border-radius: 4px;
+  }
+  
+  #games-burger-menu .menu-links li {
+    border-bottom: 1px solid #FFD700;
+  }
+  
+  #games-burger-menu .menu-links li:last-child {
+    border-bottom: none;
+  }
+  
+  #games-burger-menu .menu-links li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  #games-burger-menu .menu-links li a:hover {
+    background: #FFD700;
+    color: #000;
+  }
+  

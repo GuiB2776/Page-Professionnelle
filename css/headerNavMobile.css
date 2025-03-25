@@ -87,7 +87,7 @@
 }
 
 /* Responsive - Afficher le menu burger uniquement sur mobile/tablette */
-@media (max-width: 1024px) {
+@media (max-width: 860px) {
     #burger-icon {
         display: block;
         background-color: #ffffff;

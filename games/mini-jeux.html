@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <!-- MÉTADONNÉES -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini-Jeux | Guillaume BULLET</title>
+        <meta name="author" content="Guillaume BULLET">
+        <meta name="description" content="Découvrez tous mes mini-jeux gratuits en ligne : Tetris, Snake, et bien d'autres !">
+        <meta name="keywords" content="mini-jeux, jeux en ligne, Tetris, Snake, jeux gratuits, HTML5, CSS, JavaScript">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <!-- POLICE D'ECRITURE -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- FICHIERS CSS -->
+        <link rel="stylesheet" href="../css/mini-jeux.css"/>
+        <link rel="stylesheet" href="/games/MenuNavGames.css"/>
+    </head>
+
+    <body>
+
+        <div>
+            <!-- Menu Burger dédié aux jeux -->
+            <nav id="games-burger-menu"></nav>
+            <!-- Autres éléments du header (menu global, etc.) -->
+            <div id="menu-container"></div>
+            <div id="mobile-menu-container"></div>
+        </div>
+
+        <header>
+            <h1>Mini-jeux</h1>
+        </header>
+
+        <main>
+            <div class="intro">
+                <p>
+                    <strong> 
+                        Bienvenue dans l’espace jeux ! <br>
+                        Retrouvez ici tous les mini-jeux que j'ai pu développer.
+                        Essayez les et testez vos réflexes tout en vous amusant !
+                    </strong>
+                </p>
+            </div>
+
+            <section class="games-grid">
+                <div class="game-card">
+                    <h2>Tetris</h2>
+                    <p>Empilez les blocs sans laisser de vide. Le classique indémodable !</p>
+                    <a href="/games/tetris.html">Jouer</a>
+                </div>
+                <div class="game-card">
+                    <h2>Snake</h2>
+                    <p>Faites grandir votre serpent sans vous mordre la queue !</p>
+                    <a href="games/snake.html">Jouer</a>
+                </div>
+            </section>
+        </main>
+
+        <script src="/games/MenuNavGames.js"></script>
+
+    </body>
+
+</html>

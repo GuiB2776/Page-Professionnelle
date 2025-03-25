@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake - Jeu Classique</title>
+  <link rel="stylesheet" href="/games/snake.css">
+  <link rel="stylesheet" href="/games/MenuNavGames.css">
+</head>
+<body>
+
+  <nav id="games-burger-menu"></nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Écran d'accueil -->
+      <div id="menu-snake" class="menu-snake">
+        <div class="left">
+          <h2>Meilleurs Scores</h2>
+          <div id="leaderboard">
+            <table>
+              <thead>
+                <tr><th>Joueur</th><th>Score</th><th>Date</th></tr>
+              </thead>
+              <tbody id="scoresTable"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="right">
+          <h2>Jouer à Snake</h2>
+          <p>Entrez votre pseudo :</p>
+          <input type="text" id="pseudo" placeholder="Votre pseudo">
+          <button id="startBtn">Démarrer la partie</button>
+        </div>
+      </div>
+
+      <!-- Écran de jeu -->
+      <div id="game" class="clearfix">
+        <div class="game-area">
+          <canvas id="snake-canvas" width="400" height="400"></canvas>
+        </div>
+        <div class="side-panel">
+          <div id="score">Score : 0</div>
+          <div id="timer">Temps : 0:00</div>
+        </div>
+      </div>
+
+      <!-- Pop-up de fin -->
+      <div id="gameOverModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <p id="gameOverMessage"></p>
+          <button id="closeModal">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/games/snake.js"></script>
+  <script src="/games/MenuNavGames.js"></script>
+</body>
+</html>

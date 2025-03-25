@@ -104,8 +104,11 @@ SEO :
 ✅ Corriger les erreurs HTTP : Vérifier les erreurs 404, 500 et les redirections 301.
 ✅ Passer en HTTPS : Google favorise les sites sécurisés.
 
------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Faire une automatisation de l'affichage de la section "Contact" sur toutes les pages en utilisant du JavaScript
 - Améliorer la page : optimisation-on-page.html
 - Améliorer l'outil de gestion de projet : outil-de-gestion-de-projet.html
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

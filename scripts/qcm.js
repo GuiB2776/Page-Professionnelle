@@ -408,7 +408,7 @@
 
     // Redirige vers la page de la leçon suivante
     function goToNextLesson() {
-    window.location.href = "lecon_suivante.html";
+    window.location.href = "#";
     }
 
     // Initialisation du QCM

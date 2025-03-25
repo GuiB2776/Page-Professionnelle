@@ -21,7 +21,6 @@
     </head>
 
     <style>
-        
         .kanban-container {
             display: flex;
             justify-content: center;
@@ -84,102 +83,154 @@
 
     </style>
 
-<body>
+    <body>
 
-    <header>
-        <h1>📌 Gestion de Projet - Kanban</h1>
-    </header>
+        <header> <!-- HEADER & MENU PRINCIPAL -->
+            <!-- Menu Navigation Principal -->
+            <div id="menu-container"></div> <!-- fichier headerNav.js -->
+            <div id="mobile-menu-container"></div> <!-- fichier headerNavMobile.js -->            
+            <!-- Titre principal -->
+            <h1 class="site-title"> 📌 Gestion de Projet - Type : Kanban</h1>
+        </header>
 
-    <main>
-        <div class="kanban-container">
-            <div class="list" id="todo">
-                <h2>📝 À Faire</h2>
-                <div class="cards-container" id="todo-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <button onclick="addCard('todo-cards')">➕ Ajouter une tâche</button>
+        <main>
+            <div class="kanban-container">
+                <div class="list" id="todo">
+                    <h2>📝 À Faire</h2>
+                    <div class="cards-container" id="todo-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <button onclick="addCard('todo-cards')">➕ Ajouter une tâche</button>
+                </div>
+
+                <div class="list" id="in-progress">
+                    <h2>⏳ En Cours</h2>
+                    <div class="cards-container" id="in-progress-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <button onclick="addCard('in-progress-cards')">➕ Ajouter une tâche</button>
+                </div>
+
+                <div class="list" id="done">
+                    <h2>✅ Terminé</h2>
+                    <div class="cards-container" id="done-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <button onclick="addCard('done-cards')">➕ Ajouter une tâche</button>
+                </div>
             </div>
+        </main>
 
-            <div class="list" id="in-progress">
-                <h2>⏳ En Cours</h2>
-                <div class="cards-container" id="in-progress-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <button onclick="addCard('in-progress-cards')">➕ Ajouter une tâche</button>
-            </div>
+        <section id="contact"> <!-- LINKEDIN & FORMULAIRE DE CONTACT -->
+            <h2>Contact</h2>
+            <p><b>LinkedIn :</b> <a class="lienParagraphe" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank">Guillaume BULLET</a></p>
+            <p> Ou via ce formulaire :</p>
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+        
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+        
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
 
-            <div class="list" id="done">
-                <h2>✅ Terminé</h2>
-                <div class="cards-container" id="done-cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <button onclick="addCard('done-cards')">➕ Ajouter une tâche</button>
-            </div>
+        <div id="scrollToTop"> <!-- SCROLL TOP BUTTON -->
+            &#8679; <!-- Flèche vers le haut -->
         </div>
-    </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", loadBoard);
-        // Fonction pour ajouter une carte
-        function addCard(listId) {
-            let cardText = prompt("Entrez la tâche :");
-            if (cardText) {
-                let card = document.createElement("div");
-                card.className = "card";
-                card.textContent = cardText;
-                card.setAttribute("draggable", "true");
-                card.addEventListener("dragstart", dragStart);
-                card.addEventListener("dblclick", () => removeCard(card));
-                
-                document.getElementById(listId).appendChild(card);
-                saveBoard();
-            }
-        }
-        // Fonction pour supprimer une carte
-        function removeCard(card) {
-            if (confirm("Voulez-vous supprimer cette tâche ?")) {
-                card.remove();
-                saveBoard();
-            }
-        }
-        // Permettre le glisser-déposer
-        function allowDrop(event) {
-            event.preventDefault();
-        }
-        function dragStart(event) {
-            event.dataTransfer.setData("text", event.target.outerHTML);
-            setTimeout(() => event.target.classList.add("dragging"), 0);
-        }
-        function drop(event) {
-            event.preventDefault();
-            let data = event.dataTransfer.getData("text");
-            event.target.innerHTML += data;
-            let card = event.target.lastElementChild;
-            card.classList.remove("dragging");
-            card.addEventListener("dragstart", dragStart);
-            card.addEventListener("dblclick", () => removeCard(card));
-            saveBoard();
-        }
-        // Sauvegarde dans LocalStorage
-        function saveBoard() {
-            let board = {
-                todo: document.getElementById("todo-cards").innerHTML,
-                inProgress: document.getElementById("in-progress-cards").innerHTML,
-                done: document.getElementById("done-cards").innerHTML
-            };
-            localStorage.setItem("kanbanBoard", JSON.stringify(board));
-        }
-        // Chargement des données
-        function loadBoard() {
-            let savedBoard = JSON.parse(localStorage.getItem("kanbanBoard"));
-            if (savedBoard) {
-                document.getElementById("todo-cards").innerHTML = savedBoard.todo;
-                document.getElementById("in-progress-cards").innerHTML = savedBoard.inProgress;
-                document.getElementById("done-cards").innerHTML = savedBoard.done;
+        <footer>  <!-- FOOTER & SOCKET -->
+            <div class="socket" class="borderSocket">
+                <div class="socket-left">
+                    <a class="lienSocket" href="https://www.linkedin.com/in/guillaumebullet/" target="_blank"> <span id="site-name"> </span> </a> &copy; <span id="copyright"></span> | Tous droits réservés. 
+                </div>
+                <div class="socket-center">
+                    <a href="cgu.html" id="cgu-link"> Conditions Générales d'Utilisation </a>
+                </div>
+                <div class="socket-right">
+                    <a href="rgpd.html" id="rgpd-link"> Politique de Confidentialité (RGPD)</a>
+                </div>
+            </div>
+        </footer>
 
-                // Réattribuer les événements aux cartes chargées
-                document.querySelectorAll(".card").forEach(card => {
+        <script>
+            document.addEventListener("DOMContentLoaded", loadBoard);
+            // Fonction pour ajouter une carte
+            function addCard(listId) {
+                let cardText = prompt("Entrez la tâche :");
+                if (cardText) {
+                    let card = document.createElement("div");
+                    card.className = "card";
+                    card.textContent = cardText;
                     card.setAttribute("draggable", "true");
                     card.addEventListener("dragstart", dragStart);
                     card.addEventListener("dblclick", () => removeCard(card));
-                });
+                    
+                    document.getElementById(listId).appendChild(card);
+                    saveBoard();
+                }
             }
-        }
-    </script>
+            // Fonction pour supprimer une carte
+            function removeCard(card) {
+                if (confirm("Voulez-vous supprimer cette tâche ?")) {
+                    card.remove();
+                    saveBoard();
+                }
+            }
+            // Permettre le glisser-déposer
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+            function dragStart(event) {
+                event.dataTransfer.setData("text", event.target.outerHTML);
+                setTimeout(() => event.target.classList.add("dragging"), 0);
+            }
+            function drop(event) {
+                event.preventDefault();
+                let data = event.dataTransfer.getData("text");
+                event.target.innerHTML += data;
+                let card = event.target.lastElementChild;
+                card.classList.remove("dragging");
+                card.addEventListener("dragstart", dragStart);
+                card.addEventListener("dblclick", () => removeCard(card));
+                saveBoard();
+            }
+            // Sauvegarde dans LocalStorage
+            function saveBoard() {
+                let board = {
+                    todo: document.getElementById("todo-cards").innerHTML,
+                    inProgress: document.getElementById("in-progress-cards").innerHTML,
+                    done: document.getElementById("done-cards").innerHTML
+                };
+                localStorage.setItem("kanbanBoard", JSON.stringify(board));
+            }
+            // Chargement des données
+            function loadBoard() {
+                let savedBoard = JSON.parse(localStorage.getItem("kanbanBoard"));
+                if (savedBoard) {
+                    document.getElementById("todo-cards").innerHTML = savedBoard.todo;
+                    document.getElementById("in-progress-cards").innerHTML = savedBoard.inProgress;
+                    document.getElementById("done-cards").innerHTML = savedBoard.done;
 
-</body>
+                    // Réattribuer les événements aux cartes chargées
+                    document.querySelectorAll(".card").forEach(card => {
+                        card.setAttribute("draggable", "true");
+                        card.addEventListener("dragstart", dragStart);
+                        card.addEventListener("dblclick", () => removeCard(card));
+                    });
+                }
+            }
+        </script>
+
+        <!-- FICHIERS JavaScript -->
+        <script src="scripts/script.js"></script>
+        <script src="scripts/headerNav.js"></script>
+        <script src="scripts/headerNavMobile.js"></script>
+        <script src="scripts/contact.js"></script>
+        <script src="scripts/footer.js"></script>
+
+    </body>
+
 </html>

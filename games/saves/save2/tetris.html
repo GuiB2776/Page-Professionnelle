@@ -13,7 +13,7 @@
         <!-- POLICE D'ECRITURE -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <!-- FICHIERS CSS -->
-        <link rel="stylesheet" href="/games/tetris.css">
+        <link rel="stylesheet" href="tetris.css">
         <link rel="stylesheet" href="/games/MenuNavGames.css">
     </head>
 
@@ -73,16 +73,51 @@
                     <div class="side-panel">
                         <h2>Prochaine pièce</h2>
                         <!-- Canvas pour la prévisualisation : dimensionné pour une grille 4x4 -->
-                        <canvas id="next" width="160" height="160"></canvas>
-                        <div id="score">Score : 0</div>
+                        <canvas id="next" width="160" height="160"></canvas> 
+                        <br><br>
+                        <div id="score">Score : 0</div> 
+                        <br><br>
                         <div id="timer">Temps : 0:00</div>
                     </div>
                 </div>
             </div>
         </main>
 
+        <!-- Affichage visuel de la taille de la fenêtre -->
+        <div id="taille-fenetre" 
+            style="
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-family: monospace;
+            border-radius: 8px; 
+            z-index: 9999;">
+        </div>
+        <script>
+            function afficherTailleFenetre() 
+            {
+              const largeur = window.innerWidth;
+              const hauteur = window.innerHeight;
+              // Console
+              console.clear();
+              console.log(`Largeur : ${largeur}px`);
+              console.log(`Hauteur : ${hauteur}px`);
+              // Affichage visuel
+              const affichage = document.getElementById('taille-fenetre');
+              affichage.textContent = `📐 ${largeur}px × ${hauteur}px`;
+            }
+            // Initialisation
+            afficherTailleFenetre();
+            // Mise à jour dynamique
+            window.addEventListener('resize', afficherTailleFenetre);
+        </script>
+
         <!-- FICHIERS JavaScript -->
-        <script src="/games/tetris.js"></script>
+        <script src="tetris.js"></script>
         <script src="/games/MenuNavGames.js"></script>
     </body>
 </html>

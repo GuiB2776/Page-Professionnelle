@@ -7,7 +7,7 @@ body {
 
   header {
     background-color: #111;
-    color: white;
+    color: #ffc107;
     padding: 1.5rem;
     text-align: center;
   }
@@ -50,27 +50,31 @@ body {
   .game-card h2 {
     margin-bottom: 1rem;
     font-size: 1.4rem;
-    color: #222;
+    color: #ffc107;
   }
 
   .game-card p {
     font-size: 0.95rem;
     margin-bottom: 1.2rem;
-    color: #555;
+    color: #222;
+    font-weight: 500;
   }
 
   .game-card a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    background-color: #ffc107;
+    color: black;
+    border: 3px solid black
   }
 
   .game-card a:hover {
-    background-color: #0056b3;
+    background-color: black;
+    color: #ffc107;
+    border: 3px solid #ffc107;
   }
 
   @media (max-width: 600px) {

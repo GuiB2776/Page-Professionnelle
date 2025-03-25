@@ -32,10 +32,10 @@ main {
 
 /* Container centré et adaptatif */
 .container {
-  width: 90%;
+  /* width: 90%; */
   max-width: 900px;
-  margin: auto;
   padding: 20px;
+  margin-top: 1px;
 }
 
 /* Menu principal */
@@ -132,12 +132,15 @@ canvas {
 
 #score {
   margin-top: 20px;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #FFD700
 }
 
 #timer {
   margin-top: 10px;
   font-size: 1.1em;
+  font-weight: bold;
   color: #FFD700;
 }
 

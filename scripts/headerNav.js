@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><a href="index.html"> Accueil </a></li> <!-- Page D'Accueil -->
                 <li><a href="#"> Marketing Digital </a> <!-- Menu : Marketing Digital -->
                     <ul>
-                        <li><a href="se-former-au-marketing-digital.html"> Apprendre le Marketing Digital </a>
+                        <li><a href="marketing-digital.html"> Apprendre le Marketing Digital </a>
                             <ul>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 1 : Introduction </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 2 : Création et Optimisation de la Présence en Ligne </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 3 : Publicité en Ligne </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 4 : Marketing de Contenu </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 5 : Email Marketing et Automatisation </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 6 : Réseaux Sociaux et Community Management </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 7 : Analyse de Données et ROI </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> Module 8 : Tendances et Innovations en Marketing Digital </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 1 : Introduction </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 2 : Création et Optimisation de la Présence en Ligne </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 3 : Publicité en Ligne </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 4 : Marketing de Contenu </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 5 : Email Marketing et Automatisation </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 6 : Réseaux Sociaux et Community Management </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 7 : Analyse de Données et ROI </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 8 : Tendances et Innovations en Marketing Digital </a></li>
                             </ul>
                         </li>
                         <li><a href="#"> Bonnes Pratiques & Conseils </a>
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         </li>
                         <li><a href="outils-de-marketing-digital.html"> Outils Marketing</a>
                             <ul>
-                                <li><a href="analyseur-de-texte-seo.html"> Analyseur de Score de Lisibilité </a></li>
-                                <li><a href="generateur-utm.html"> Générateur d'URL UTM </a></li>
-                                <li><a href="simulateur-SERP.html"> Simulateur de SERP </a></li>
+                                <li><a href="analyseur-de-texte-seo.html"> - Analyseur de Score de Lisibilité </a></li>
+                                <li><a href="generateur-utm.html"> - Générateur d'URL UTM </a></li>
+                                <li><a href="simulateur-SERP.html"> - Simulateur de SERP </a></li>
                             </ul>
                         </li>
                     </ul>

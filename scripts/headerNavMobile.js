@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <ul>
                         <li><a href="marketing-digital.html"> Apprendre le Marketing Digital </a>
                             <ul>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 1 : Introduction </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 2 : Création et Optimisation de la Présence en Ligne </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 3 : Publicité en Ligne </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 4 : Marketing de Contenu </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 5 : Email Marketing et Automatisation </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 6 : Réseaux Sociaux et Community Management </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 7 : Analyse de Données et ROI </a></li>
-                                <li><a href="introduction-au-marketing-digital.html"> - Module 8 : Tendances et Innovations en Marketing Digital </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 1 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 2 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 3 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 4 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 5 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 6 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 7 : ⚠️ En préparation ⚠️ </a></li>
+                                <li><a href="introduction-au-marketing-digital.html"> - Module 8 : ⚠️ En préparation ⚠️ </a></li>
                             </ul>
                         </li>
                         <li><a href="#"> Bonnes Pratiques & Conseils </a>
